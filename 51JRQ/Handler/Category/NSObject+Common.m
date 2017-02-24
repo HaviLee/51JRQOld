@@ -55,7 +55,8 @@
         DeBugLog(@"***********服务器提示：%@********************",error);
         NSString *showError = [returnErrorMessage objectForKey:[NSString stringWithFormat:@"%@",resultCode]];
         if (autoShowError) {
-            [NSObject showHudTipStr:showError];
+//            [NSObject showHudTipStr:showError];
+            DeBugLog(@"%@",showError);
         }
     }
     return error;

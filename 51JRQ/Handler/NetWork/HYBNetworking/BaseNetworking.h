@@ -24,7 +24,40 @@
  @param success 成功返回
  @param fail 错误返回
  */
-- (void)getLoginWith:(NSDictionary *)params
+- (void)loginWith:(NSDictionary *)params
+             success:(HYBResponseSuccess)success
+                fail:(HYBResponseFail)fail;
+
+/**
+ 个人用户注册
+
+ @param params 传入参数
+ @param success 成功返回
+ @param fail 错误返回
+ */
+- (void)registerWith:(NSDictionary *)params
+             success:(HYBResponseSuccess)success
+                fail:(HYBResponseFail)fail;
+
+/**
+ 获取数据字典
+
+ @param params 传入参数
+ @param success 成功
+ @param fail 失败
+ */
+- (void)queryKeyWith:(NSDictionary *)params
+             success:(HYBResponseSuccess)success
+                fail:(HYBResponseFail)fail;
+
+/**
+ 获取验证码-找回密码
+
+ @param params 参数
+ @param success 成功
+ @param fail 失败
+ */
+- (void)findOldPassWith:(NSDictionary *)params
              success:(HYBResponseSuccess)success
                 fail:(HYBResponseFail)fail;
 

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1045D487B0ACE9F0237715BB /* libPods-51JRQTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B1E66E37D7A5FAA262CE6589 /* libPods-51JRQTests.a */; };
 		5701A7F81E5FDE6200C6CE57 /* com_51jrq.cer in Resources */ = {isa = PBXBuildFile; fileRef = 5701A7F71E5FDE6200C6CE57 /* com_51jrq.cer */; };
+		5701A7FA1E60036400C6CE57 /* ReturnCode.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5701A7F91E60036400C6CE57 /* ReturnCode.plist */; };
 		577A84CC1E5E8ED800834E61 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 577A84CB1E5E8ED800834E61 /* main.m */; };
 		577A84CF1E5E8ED800834E61 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 577A84CE1E5E8ED800834E61 /* AppDelegate.m */; };
 		577A84D81E5E8ED800834E61 /* _1JRQ.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 577A84D61E5E8ED800834E61 /* _1JRQ.xcdatamodeld */; };
@@ -103,6 +104,7 @@
 		1C6197432DB36FBDB5960134 /* Pods-51JRQ.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-51JRQ.debug.xcconfig"; path = "Pods/Target Support Files/Pods-51JRQ/Pods-51JRQ.debug.xcconfig"; sourceTree = "<group>"; };
 		351A57F80F827461D0413DD4 /* libPods-51JRQUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-51JRQUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5701A7F71E5FDE6200C6CE57 /* com_51jrq.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = com_51jrq.cer; sourceTree = "<group>"; };
+		5701A7F91E60036400C6CE57 /* ReturnCode.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ReturnCode.plist; sourceTree = "<group>"; };
 		577A84C71E5E8ED800834E61 /* 51JRQ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 51JRQ.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		577A84CB1E5E8ED800834E61 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		577A84CD1E5E8ED800834E61 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -345,6 +347,7 @@
 				577A84D91E5E8ED800834E61 /* Assets.xcassets */,
 				577A84DB1E5E8ED800834E61 /* LaunchScreen.storyboard */,
 				577A84DE1E5E8ED800834E61 /* Info.plist */,
+				5701A7F91E60036400C6CE57 /* ReturnCode.plist */,
 				577A84D61E5E8ED800834E61 /* _1JRQ.xcdatamodeld */,
 				577A84CB1E5E8ED800834E61 /* main.m */,
 				5701A7F71E5FDE6200C6CE57 /* com_51jrq.cer */,
@@ -960,6 +963,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5701A7F81E5FDE6200C6CE57 /* com_51jrq.cer in Resources */,
+				5701A7FA1E60036400C6CE57 /* ReturnCode.plist in Resources */,
 				577A84DD1E5E8ED800834E61 /* LaunchScreen.storyboard in Resources */,
 				577A84DA1E5E8ED800834E61 /* Assets.xcassets in Resources */,
 			);

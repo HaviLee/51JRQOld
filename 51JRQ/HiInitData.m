@@ -26,6 +26,12 @@
     //设置缓存
     [HYBNetworking cacheGetRequest:YES shoulCachePost:YES];
 
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        NSString *dataPath = [[NSBundle mainBundle]pathForResource:@"ReturnCode" ofType:@"plist"];
+        returnErrorMessage = [NSDictionary dictionaryWithContentsOfFile:dataPath];
+    });
+
+
 }
 
 @end

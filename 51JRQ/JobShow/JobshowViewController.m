@@ -22,7 +22,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Add you own code
-    [[BaseNetworking sharedAPIManager] getLoginWith:nil success:^(id response) {
+//    [[BaseNetworking sharedAPIManager] queryKeyWith:nil success:^(id response) {
+//
+//    } fail:^(NSError *error) {
+//
+//    }];
+//
+//    [[BaseNetworking sharedAPIManager] loginWith:nil success:^(id response) {
+//
+//    } fail:^(NSError *error) {
+//        
+//    }];
+
+    [[BaseNetworking sharedAPIManager] findOldPassWith:nil success:^(id response) {
 
     } fail:^(NSError *error) {
 
