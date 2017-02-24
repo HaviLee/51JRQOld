@@ -20,5 +20,6 @@
 #import "CYLPlusButtonSubclass.h"
 #import "HYBNetworking.h"
 #import "Minya.h"
+#import "Global.h"
 
 #endif /* Configer_pch */

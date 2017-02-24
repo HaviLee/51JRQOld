@@ -26,31 +26,23 @@ static BaseNetworking *baseApi = nil;
 - (NSDictionary *)getRequestHeader
 {
     return @{
-             @"head": @{
-                     @"transcode": @"D0001",
-                     @"type": @"i"
-                     }
-            };
+             @"transcode": @"D0001",
+             @"type": @"i"
+             };
 }
 
-- (void)requestLogin:(NSDictionary *)paras
+- (void)getLoginWith:(NSDictionary *)params success:(HYBResponseSuccess)success
+                fail:(HYBResponseFail)fail;
 {
     NSDictionary *dic = @{
-                          @"head": @{
-                              @"transcode": @"D0001",
-                              @"type": @"i"
-                          },
+                          @"head": [self getRequestHeader],
                           @"data": @{
                               @"username": @"13122785292",
                               @"passwd": @"a645d373a63aea2d305163ec247494f4",
                               @"deviceToken": @"e3cb5d936be6dbd95eb57aae3646774611c5acab45f91a0e2e5d05370bcd11be"
                           }
                           };
-    [HYBNetworking postWithUrl:@"api/login" refreshCache:YES params:dic success:^(id response) {
-
-    } fail:^(NSError *error) {
-
-    }];
+    [HYBNetworking postWithUrl:@"api/login" refreshCache:YES params:dic success:success fail:fail];
 }
 
 @end

@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+extern NSDictionary *returnErrorMessage;
+
 extern NSString *selectedBlueName;
 extern BOOL isDeviceOK;
 extern NSInteger minFingerData;

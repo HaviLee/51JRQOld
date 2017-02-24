@@ -42,9 +42,9 @@
  *
  * See #strongify for an example of usage.
  */
-#define weakify(...) \
-    ext_keywordify \
-    metamacro_foreach_cxt(ext_weakify_,, __weak, __VA_ARGS__)
+//#define weakify(...) \
+//    ext_keywordify \
+//    metamacro_foreach_cxt(ext_weakify_,, __weak, __VA_ARGS__)
 
 /**
  * Like #weakify, but uses \c __unsafe_unretained instead, for targets or
@@ -80,12 +80,12 @@
 
  * @endcode
  */
-#define strongify(...) \
-    ext_keywordify \
-    _Pragma("clang diagnostic push") \
-    _Pragma("clang diagnostic ignored \"-Wshadow\"") \
-    metamacro_foreach(ext_strongify_,, __VA_ARGS__) \
-    _Pragma("clang diagnostic pop")
+//#define strongify(...) \
+//    ext_keywordify \
+//    _Pragma("clang diagnostic push") \
+//    _Pragma("clang diagnostic ignored \"-Wshadow\"") \
+//    metamacro_foreach(ext_strongify_,, __VA_ARGS__) \
+//    _Pragma("clang diagnostic pop")
 
 /*** implementation details follow ***/
 typedef void (^ext_cleanupBlock_t)();

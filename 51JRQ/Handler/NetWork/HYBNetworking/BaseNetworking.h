@@ -17,6 +17,15 @@
  */
 + (id)sharedAPIManager;
 
-- (void)requestLogin:(NSDictionary *)paras ;
+/**
+ 客户端登录操作
+
+ @param params get 方法参数
+ @param success 成功返回
+ @param fail 错误返回
+ */
+- (void)getLoginWith:(NSDictionary *)params
+             success:(HYBResponseSuccess)success
+                fail:(HYBResponseFail)fail;
 
 @end

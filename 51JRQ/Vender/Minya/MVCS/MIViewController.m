@@ -64,6 +64,11 @@
     [self addObservers];
 }
 
+//- (UIStatusBarStyle)preferredStatusBarStyle
+//{
+//    return UIStatusBarStyleLightContent;
+//}
+
 #pragma mark - Public Methods
 
 - (void)addObservers { }

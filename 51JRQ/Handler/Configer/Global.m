@@ -8,6 +8,8 @@
 
 #import "Global.h"
 
+NSDictionary *returnErrorMessage = nil;
+
 NSString *selectedBlueName = @"";
 BOOL isDeviceOK = NO;
 NSInteger minFingerData = NSIntegerMax;

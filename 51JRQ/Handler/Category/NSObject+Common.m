@@ -44,6 +44,23 @@
 //    [[UINavigationBar appearance] setBackgroundImage: [UIImage imageWithColor:[UIColor colorWithHexString:isTest?@"0x3bbd79": @"0x28303b"]] forBarMetrics:UIBarMetricsDefault];
 }
 
+-(id)handleResponse:(id)responseJSON autoShowError:(BOOL)autoShowError
+{
+    NSError *error = nil;
+        //code为非0值时，表示有错
+    NSString *resultCode = [responseJSON valueForKeyPath:@"returnCode"];
+
+    if (![resultCode isEqualToString:@"AAAAAAA"]) {
+        error = [NSError errorWithDomain:[NSObject baseURLStr] code:resultCode.intValue userInfo:responseJSON];
+        DeBugLog(@"***********服务器提示：%@********************",error);
+        NSString *showError = [returnErrorMessage objectForKey:[NSString stringWithFormat:@"%@",resultCode]];
+        if (autoShowError) {
+            [NSObject showHudTipStr:showError];
+        }
+    }
+    return error;
+}
+
 
 
 @end

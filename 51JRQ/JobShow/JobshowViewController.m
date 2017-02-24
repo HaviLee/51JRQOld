@@ -22,7 +22,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Add you own code
-    [[BaseNetworking sharedAPIManager] requestLogin:nil];
+    [[BaseNetworking sharedAPIManager] getLoginWith:nil success:^(id response) {
+
+    } fail:^(NSError *error) {
+
+    }];
 }
 
 - (void)setupPipeline:(__kindof MIPipeline *)pipeline {

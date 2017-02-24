@@ -10,6 +10,7 @@
 #import "AFNetworkActivityIndicatorManager.h"
 #import "AFNetworking.h"
 #import "AFHTTPSessionManager.h"
+#import "NSObject+Common.h"
 
 #import <CommonCrypto/CommonDigest.h>
 
@@ -354,19 +355,43 @@ static inline NSString *cachePath() {
         progress(downloadProgress.completedUnitCount, downloadProgress.totalUnitCount);
       }
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-      [self successResponse:responseObject callback:success];
-      
-      if (sg_cacheGet) {
-        [self cacheResponseObject:responseObject request:task.currentRequest parameters:params];
-      }
-      
-      [[self allTasks] removeObject:task];
-      
-      if ([self isDebug]) {
-        [self logWithSuccessResponse:responseObject
-                                 url:absolute
-                              params:params];
-      }
+        id error = [self handleResponse:responseObject autoShowError:YES];
+        if (error) {
+            id response = [HYBNetworking cahceResponseWithURL:absolute
+                                                   parameters:params];
+            if (response) {
+                if (success) {
+                    [self successResponse:response callback:success];
+
+                    if ([self isDebug]) {
+                        [self logWithSuccessResponse:response
+                                                 url:absolute
+                                              params:params];
+                    }
+                }
+            } else {
+                [self handleCallbackWithError:error fail:fail];
+
+                if ([self isDebug]) {
+                    [self logWithFailError:error url:absolute params:params];
+                }
+            }
+
+        }else{
+            [self successResponse:responseObject callback:success];
+
+            if (sg_cacheGet) {
+                [self cacheResponseObject:responseObject request:task.currentRequest parameters:params];
+            }
+
+            [[self allTasks] removeObject:task];
+
+            if ([self isDebug]) {
+                [self logWithSuccessResponse:responseObject
+                                         url:absolute
+                                      params:params];
+            }
+        }
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
       [[self allTasks] removeObject:task];
       
@@ -441,19 +466,44 @@ static inline NSString *cachePath() {
         progress(downloadProgress.completedUnitCount, downloadProgress.totalUnitCount);
       }
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-      [self successResponse:responseObject callback:success];
-      
-      if (sg_cachePost) {
-        [self cacheResponseObject:responseObject request:task.currentRequest  parameters:params];
-      }
-      
-      [[self allTasks] removeObject:task];
-      
-      if ([self isDebug]) {
-        [self logWithSuccessResponse:responseObject
-                                 url:absolute
-                              params:params];
-      }
+        id error = [self handleResponse:responseObject autoShowError:YES];
+        if (error) {
+            id response = [HYBNetworking cahceResponseWithURL:absolute
+                                                   parameters:params];
+            if (response) {
+                if (success) {
+                    [self successResponse:response callback:success];
+
+                    if ([self isDebug]) {
+                        [self logWithSuccessResponse:response
+                                                 url:absolute
+                                              params:params];
+                    }
+                }
+            } else {
+                [self handleCallbackWithError:error fail:fail];
+
+                if ([self isDebug]) {
+                    [self logWithFailError:error url:absolute params:params];
+                }
+            }
+            
+        }else{
+
+            [self successResponse:responseObject callback:success];
+
+            if (sg_cachePost) {
+                [self cacheResponseObject:responseObject request:task.currentRequest  parameters:params];
+            }
+
+            [[self allTasks] removeObject:task];
+
+            if ([self isDebug]) {
+                [self logWithSuccessResponse:responseObject
+                                         url:absolute
+                                      params:params];
+            }
+        }
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
       [[self allTasks] removeObject:task];
       
