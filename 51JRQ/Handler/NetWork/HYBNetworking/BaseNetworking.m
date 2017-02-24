@@ -23,28 +23,16 @@ static BaseNetworking *baseApi = nil;
     return baseApi;
 }
 
-- (NSDictionary *)getRequestHeader
-{
-    return @{
-             @"transcode": @"D0001",
-             @"type": @"i"
-             };
-}
-
-- (NSDictionary *)getRequestHeader1
-{
-    return @{
-             @"transcode": @"A0001",
-             @"type": @"i"
-             };
-}
 
 
 - (void)loginWith:(NSDictionary *)params success:(HYBResponseSuccess)success
                 fail:(HYBResponseFail)fail;
 {
     NSDictionary *dic = @{
-                          @"head": [self getRequestHeader],
+                          @"head": @{
+                                      @"transcode": @"D0001",
+                                      @"type": @"i"
+                                  },
                           @"data": @{
                                       @"username": @"13122785292",
                                       @"passwd": @"a645d373a63aea2d305163ec247494f4",
@@ -59,7 +47,10 @@ static BaseNetworking *baseApi = nil;
                 fail:(HYBResponseFail)fail
 {
     NSDictionary *dic = @{
-                          @"head": [self getRequestHeader],
+                          @"head": @{
+                                      @"transcode": @"R0001",
+                                      @"type": @"i"
+                                  },
                           @"data": params
                           };
     [HYBNetworking postWithUrl:@"api/regphone" refreshCache:YES params:dic success:success fail:fail];
@@ -70,7 +61,10 @@ static BaseNetworking *baseApi = nil;
                 fail:(HYBResponseFail)fail
 {
     NSDictionary *dic = @{
-                          @"head": [self getRequestHeader1],
+                          @"head": @{
+                                      @"transcode": @"DC001",
+                                      @"type": @"i"
+                                  },
                           @"data": @{
                                     @"selAll":@"true",
                                   }
@@ -78,12 +72,15 @@ static BaseNetworking *baseApi = nil;
     [HYBNetworking postWithUrl:@"api/dictionary" refreshCache:YES params:dic success:success fail:fail];
 }
 
-- (void)findOldPassWith:(NSDictionary *)params
+- (void)getForgetPassVerifyCodeWith:(NSDictionary *)params
                 success:(HYBResponseSuccess)success
                    fail:(HYBResponseFail)fail
 {
     NSDictionary *dic = @{
-                          @"head": [self getRequestHeader1],
+                          @"head": @{
+                                      @"transcode": @"A0001",
+                                      @"type": @"i"
+                                  },
                           @"data": @{
                                   @"phone":@"13122785292",
                                   }
@@ -91,5 +88,171 @@ static BaseNetworking *baseApi = nil;
     [HYBNetworking postWithUrl:@"api/password_old" refreshCache:YES params:dic success:success fail:fail];
 }
 
+- (void)forgetOldPassWith:(NSDictionary *)params
+                  success:(HYBResponseSuccess)success
+                     fail:(HYBResponseFail)fail
+{
+    NSDictionary *dic = @{
+                          @"head": @{
+                                      @"transcode": @"A0002",
+                                      @"type": @"i"
+                                  },
+                          @"data": params
+                          };
+    [HYBNetworking postWithUrl:@"api/password_old" refreshCache:YES params:dic success:success fail:fail];
+}
 
+- (void)changeOldPassWith:(NSDictionary *)params
+                  success:(HYBResponseSuccess)success
+                     fail:(HYBResponseFail)fail
+{
+    NSDictionary *dic = @{
+                          @"head": @{
+                                  @"transcode": @"P0002",
+                                  @"type": @"i"
+                                  },
+                          @"data": params
+                          };
+    [HYBNetworking postWithUrl:@"api/persoanl" refreshCache:YES params:dic success:success fail:fail];
+}
+
+- (void)uploadHeadeImageWith:(NSDictionary *)params
+                     success:(HYBResponseSuccess)success
+                        fail:(HYBResponseFail)fail
+{
+    NSDictionary *dic = @{
+                          @"head": @{
+                                  @"transcode": @"P0038",
+                                  @"type": @"i"
+                                  },
+                          @"data": params
+                          };
+    [HYBNetworking postWithUrl:@"api/pimg" refreshCache:YES params:dic success:success fail:fail];
+}
+
+- (void)getRegisterVrifyCodeWith:(NSDictionary *)params
+                         success:(HYBResponseSuccess)success
+                            fail:(HYBResponseFail)fail
+{
+    NSDictionary *dic = @{
+                          @"head": @{
+                                  @"transcode": @"R0002",
+                                  @"type": @"i"
+                                  },
+                          @"data": params
+                          };
+    [HYBNetworking postWithUrl:@"api/regphone" refreshCache:YES params:dic success:success fail:fail];
+}
+
+- (void)searchHunterWith:(NSDictionary *)params
+                 success:(HYBResponseSuccess)success
+                    fail:(HYBResponseFail)fail
+{
+    NSDictionary *dic = @{
+                          @"head": @{
+                                  @"transcode": @"L0001",
+                                  @"type": @"i"
+                                  },
+                          @"data": params
+                          };
+    [HYBNetworking postWithUrl:@"api/hunterjob" refreshCache:YES params:dic success:success fail:fail];
+}
+
+- (void)checkHunterJobDetailWith:(NSDictionary *)params
+                   success:(HYBResponseSuccess)success
+                      fail:(HYBResponseFail)fail
+{
+    NSDictionary *dic = @{
+                          @"head": @{
+                                  @"transcode": @"L0002",
+                                  @"type": @"i"
+                                  },
+                          @"data": params
+                          };
+    [HYBNetworking postWithUrl:@"api/hunterjob" refreshCache:YES params:dic success:success fail:fail];
+}
+
+- (void)appointmentHunterJobWith:(NSDictionary *)params
+                   success:(HYBResponseSuccess)success
+                      fail:(HYBResponseFail)fail
+{
+    NSDictionary *dic = @{
+                          @"head": @{
+                                  @"transcode": @"L0003",
+                                  @"type": @"i"
+                                  },
+                          @"data": params
+                          };
+    [HYBNetworking postWithUrl:@"api/hunterjob" refreshCache:YES params:dic success:success fail:fail];
+}
+
+- (void)collectionHunterJobWith:(NSDictionary *)params
+                   success:(HYBResponseSuccess)success
+                      fail:(HYBResponseFail)fail
+{
+    NSDictionary *dic = @{
+                          @"head": @{
+                                  @"transcode": @"L0004",
+                                  @"type": @"i"
+                                  },
+                          @"data": params
+                          };
+    [HYBNetworking postWithUrl:@"api/hunterjob" refreshCache:YES params:dic success:success fail:fail];
+}
+
+- (void)searchCompanyJobWith:(NSDictionary *)params
+                     success:(HYBResponseSuccess)success
+                        fail:(HYBResponseFail)fail
+{
+    NSDictionary *dic = @{
+                          @"head": @{
+                                  @"transcode": @"Q0001",
+                                  @"type": @"i"
+                                  },
+                          @"data": params
+                          };
+    [HYBNetworking postWithUrl:@"api/companyjob" refreshCache:YES params:dic success:success fail:fail];
+}
+
+- (void)checkCompanyJobDetailWith:(NSDictionary *)params
+                     success:(HYBResponseSuccess)success
+                        fail:(HYBResponseFail)fail
+{
+    NSDictionary *dic = @{
+                          @"head": @{
+                                  @"transcode": @"Q0002",
+                                  @"type": @"i"
+                                  },
+                          @"data": params
+                          };
+    [HYBNetworking postWithUrl:@"api/companyjob" refreshCache:YES params:dic success:success fail:fail];
+}
+
+- (void)appointmentCompanyJobWith:(NSDictionary *)params
+                     success:(HYBResponseSuccess)success
+                        fail:(HYBResponseFail)fail
+{
+    NSDictionary *dic = @{
+                          @"head": @{
+                                  @"transcode": @"Q0003",
+                                  @"type": @"i"
+                                  },
+                          @"data": params
+                          };
+    [HYBNetworking postWithUrl:@"api/companyjob" refreshCache:YES params:dic success:success fail:fail];
+}
+
+- (void)collectionCompanyJobWith:(NSDictionary *)params
+                     success:(HYBResponseSuccess)success
+                        fail:(HYBResponseFail)fail
+{
+    NSDictionary *dic = @{
+                          @"head": @{
+                                  @"transcode": @"Q0004",
+                                  @"type": @"i"
+                                  },
+                          @"data": params
+                          };
+    [HYBNetworking postWithUrl:@"api/companyjob" refreshCache:YES params:dic success:success fail:fail];
+}
 @end

@@ -27,18 +27,18 @@
 //    } fail:^(NSError *error) {
 //
 //    }];
-//
+////
 //    [[BaseNetworking sharedAPIManager] loginWith:nil success:^(id response) {
 //
 //    } fail:^(NSError *error) {
 //        
 //    }];
-
-    [[BaseNetworking sharedAPIManager] findOldPassWith:nil success:^(id response) {
-
-    } fail:^(NSError *error) {
-
-    }];
+//
+//    [[BaseNetworking sharedAPIManager] findOldPassWith:nil success:^(id response) {
+//
+//    } fail:^(NSError *error) {
+//
+//    }];
 }
 
 - (void)setupPipeline:(__kindof MIPipeline *)pipeline {
