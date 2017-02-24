@@ -9,6 +9,7 @@
 #import "JobshowViewController.h"
 #import "JobshowPipeline.h"
 #import "Minya.h"
+#import "BaseNetworking.h"
 
 @interface JobshowViewController ()
 
@@ -20,7 +21,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Add you own code 
+    // Add you own code
+    [[BaseNetworking sharedAPIManager] requestLogin:nil];
 }
 
 - (void)setupPipeline:(__kindof MIPipeline *)pipeline {

@@ -12,7 +12,7 @@
 
 #endif /* Definations_h */
 
-#define kAppBaseURL @"http://webservice.meddo99.com:9000/"
+#define kAppBaseURL @"https://m.51jrq.com/mobile2/"
 #define kAppTestBaseURL @"http://webservice.meddo99.com:9001/"
 #define kKeyWindow [UIApplication sharedApplication].keyWindow
 #define kUserDefaults [NSUserDefaults standardUserDefaults]

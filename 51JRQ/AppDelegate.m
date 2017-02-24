@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "HiInitData.h"
+#import "HiThirdPartService.h"
 
 @interface AppDelegate ()
 

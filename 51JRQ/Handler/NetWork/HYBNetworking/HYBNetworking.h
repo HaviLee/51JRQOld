@@ -23,7 +23,6 @@
  *
  *  @param bytesRead                 已下载的大小
  *  @param totalBytesRead            文件总大小
- *  @param totalBytesExpectedToRead 还有多少需要下载
  */
 typedef void (^HYBDownloadProgress)(int64_t bytesRead,
                                     int64_t totalBytesRead);
@@ -199,7 +198,7 @@ typedef void(^HYBResponseFail)(NSError *error);
  *
  *  @param url     接口路径，如/path/getArticleList
  *  @param refreshCache 是否刷新缓存。由于请求成功也可能没有数据，对于业务失败，只能通过人为手动判断
- *  @param params  接口中所需要的拼接参数，如@{"categoryid" : @(12)}
+ *  接口中拼接的参数
  *  @param success 接口成功请求到数据的回调
  *  @param fail    接口请求数据失败的回调
  *
@@ -261,7 +260,6 @@ typedef void(^HYBResponseFail)(NSError *error);
  *	@param success		上传成功回调
  *	@param fail				上传失败回调
  *
- *	@return
  */
 + (HYBURLSessionTask *)uploadWithImage:(UIImage *)image
                                    url:(NSString *)url
@@ -284,7 +282,6 @@ typedef void(^HYBResponseFail)(NSError *error);
  *	@param success				上传成功回调
  *	@param fail					上传失败回调
  *
- *	@return
  */
 + (HYBURLSessionTask *)uploadFileWithUrl:(NSString *)url
                            uploadingFile:(NSString *)uploadingFile

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1045D487B0ACE9F0237715BB /* libPods-51JRQTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B1E66E37D7A5FAA262CE6589 /* libPods-51JRQTests.a */; };
+		5701A7F81E5FDE6200C6CE57 /* com_51jrq.cer in Resources */ = {isa = PBXBuildFile; fileRef = 5701A7F71E5FDE6200C6CE57 /* com_51jrq.cer */; };
 		577A84CC1E5E8ED800834E61 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 577A84CB1E5E8ED800834E61 /* main.m */; };
 		577A84CF1E5E8ED800834E61 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 577A84CE1E5E8ED800834E61 /* AppDelegate.m */; };
 		577A84D81E5E8ED800834E61 /* _1JRQ.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 577A84D61E5E8ED800834E61 /* _1JRQ.xcdatamodeld */; };
@@ -19,7 +20,6 @@
 		577A85151E5E942300834E61 /* NSObject+AdvertisementView.m in Sources */ = {isa = PBXBuildFile; fileRef = 577A85051E5E942300834E61 /* NSObject+AdvertisementView.m */; };
 		577A85161E5E942300834E61 /* NSObject+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 577A85081E5E942300834E61 /* NSObject+Common.m */; };
 		577A85171E5E942300834E61 /* UIImage+Tint.m in Sources */ = {isa = PBXBuildFile; fileRef = 577A850A1E5E942300834E61 /* UIImage+Tint.m */; };
-		577A85181E5E942300834E61 /* BaseNetworkAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 577A85101E5E942300834E61 /* BaseNetworkAPI.m */; };
 		577A85191E5E942300834E61 /* HYBNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 577A85131E5E942300834E61 /* HYBNetworking.m */; };
 		577A851D1E5E959F00834E61 /* Global.m in Sources */ = {isa = PBXBuildFile; fileRef = 577A851C1E5E959F00834E61 /* Global.m */; };
 		577A85221E5E95C400834E61 /* NSNumber+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 577A851F1E5E95C400834E61 /* NSNumber+Common.m */; };
@@ -77,6 +77,9 @@
 		577A85E71E5EAA3400834E61 /* MIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 577A85CE1E5EAA3300834E61 /* MIViewController.m */; };
 		577A85E81E5EAA3400834E61 /* UIView+MIPipeline.m in Sources */ = {isa = PBXBuildFile; fileRef = 577A85D01E5EAA3300834E61 /* UIView+MIPipeline.m */; };
 		577A85EB1E5EAAC100834E61 /* CYNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 577A85EA1E5EAAC100834E61 /* CYNavigationViewController.m */; };
+		577A86041E5FCBEA00834E61 /* HiInitData.m in Sources */ = {isa = PBXBuildFile; fileRef = 577A86011E5FCBEA00834E61 /* HiInitData.m */; };
+		577A86051E5FCBEA00834E61 /* HiThirdPartService.m in Sources */ = {isa = PBXBuildFile; fileRef = 577A86031E5FCBEA00834E61 /* HiThirdPartService.m */; };
+		577A86081E5FCF1B00834E61 /* BaseNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 577A86071E5FCF1B00834E61 /* BaseNetworking.m */; };
 		5D05083804E7E00184B332C6 /* libPods-51JRQ.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C3E5BBFF95CD39B11FC314E4 /* libPods-51JRQ.a */; };
 		F9D145DA29B9BE6E6985E925 /* libPods-51JRQUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 351A57F80F827461D0413DD4 /* libPods-51JRQUITests.a */; };
 /* End PBXBuildFile section */
@@ -101,6 +104,7 @@
 /* Begin PBXFileReference section */
 		1C6197432DB36FBDB5960134 /* Pods-51JRQ.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-51JRQ.debug.xcconfig"; path = "Pods/Target Support Files/Pods-51JRQ/Pods-51JRQ.debug.xcconfig"; sourceTree = "<group>"; };
 		351A57F80F827461D0413DD4 /* libPods-51JRQUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-51JRQUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5701A7F71E5FDE6200C6CE57 /* com_51jrq.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = com_51jrq.cer; sourceTree = "<group>"; };
 		577A84C71E5E8ED800834E61 /* 51JRQ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 51JRQ.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		577A84CB1E5E8ED800834E61 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		577A84CD1E5E8ED800834E61 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -125,8 +129,6 @@
 		577A850A1E5E942300834E61 /* UIImage+Tint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Tint.m"; sourceTree = "<group>"; };
 		577A850C1E5E942300834E61 /* Configer.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Configer.pch; sourceTree = "<group>"; };
 		577A850D1E5E942300834E61 /* Definations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Definations.h; sourceTree = "<group>"; };
-		577A850F1E5E942300834E61 /* BaseNetworkAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNetworkAPI.h; sourceTree = "<group>"; };
-		577A85101E5E942300834E61 /* BaseNetworkAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNetworkAPI.m; sourceTree = "<group>"; };
 		577A85121E5E942300834E61 /* HYBNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYBNetworking.h; sourceTree = "<group>"; };
 		577A85131E5E942300834E61 /* HYBNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYBNetworking.m; sourceTree = "<group>"; };
 		577A851B1E5E959F00834E61 /* Global.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Global.h; sourceTree = "<group>"; };
@@ -247,6 +249,12 @@
 		577A85D01E5EAA3300834E61 /* UIView+MIPipeline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MIPipeline.m"; sourceTree = "<group>"; };
 		577A85E91E5EAAC100834E61 /* CYNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYNavigationViewController.h; sourceTree = "<group>"; };
 		577A85EA1E5EAAC100834E61 /* CYNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYNavigationViewController.m; sourceTree = "<group>"; };
+		577A86001E5FCBEA00834E61 /* HiInitData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HiInitData.h; sourceTree = "<group>"; };
+		577A86011E5FCBEA00834E61 /* HiInitData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HiInitData.m; sourceTree = "<group>"; };
+		577A86021E5FCBEA00834E61 /* HiThirdPartService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HiThirdPartService.h; sourceTree = "<group>"; };
+		577A86031E5FCBEA00834E61 /* HiThirdPartService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HiThirdPartService.m; sourceTree = "<group>"; };
+		577A86061E5FCF1B00834E61 /* BaseNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNetworking.h; sourceTree = "<group>"; };
+		577A86071E5FCF1B00834E61 /* BaseNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNetworking.m; sourceTree = "<group>"; };
 		6C54DFBE28585BB3CBA0B024 /* Pods-51JRQTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-51JRQTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-51JRQTests/Pods-51JRQTests.release.xcconfig"; sourceTree = "<group>"; };
 		7297EB8E1B1A94E4BDD269CA /* Pods-51JRQ.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-51JRQ.release.xcconfig"; path = "Pods/Target Support Files/Pods-51JRQ/Pods-51JRQ.release.xcconfig"; sourceTree = "<group>"; };
 		844532AD64A55543E4BEAB2C /* Pods-51JRQTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-51JRQTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-51JRQTests/Pods-51JRQTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -343,6 +351,7 @@
 				577A84DE1E5E8ED800834E61 /* Info.plist */,
 				577A84D61E5E8ED800834E61 /* _1JRQ.xcdatamodeld */,
 				577A84CB1E5E8ED800834E61 /* main.m */,
+				5701A7F71E5FDE6200C6CE57 /* com_51jrq.cer */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -416,8 +425,6 @@
 		577A850E1E5E942300834E61 /* NetWork */ = {
 			isa = PBXGroup;
 			children = (
-				577A850F1E5E942300834E61 /* BaseNetworkAPI.h */,
-				577A85101E5E942300834E61 /* BaseNetworkAPI.m */,
 				577A85111E5E942300834E61 /* HYBNetworking */,
 			);
 			path = NetWork;
@@ -428,6 +435,8 @@
 			children = (
 				577A85121E5E942300834E61 /* HYBNetworking.h */,
 				577A85131E5E942300834E61 /* HYBNetworking.m */,
+				577A86061E5FCF1B00834E61 /* BaseNetworking.h */,
+				577A86071E5FCF1B00834E61 /* BaseNetworking.m */,
 			);
 			path = HYBNetworking;
 			sourceTree = "<group>";
@@ -437,6 +446,10 @@
 			children = (
 				577A84CD1E5E8ED800834E61 /* AppDelegate.h */,
 				577A84CE1E5E8ED800834E61 /* AppDelegate.m */,
+				577A86001E5FCBEA00834E61 /* HiInitData.h */,
+				577A86011E5FCBEA00834E61 /* HiInitData.m */,
+				577A86021E5FCBEA00834E61 /* HiThirdPartService.h */,
+				577A86031E5FCBEA00834E61 /* HiThirdPartService.m */,
 			);
 			name = AppDelegate;
 			sourceTree = "<group>";
@@ -952,6 +965,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5701A7F81E5FDE6200C6CE57 /* com_51jrq.cer in Resources */,
 				577A84DD1E5E8ED800834E61 /* LaunchScreen.storyboard in Resources */,
 				577A84DA1E5E8ED800834E61 /* Assets.xcassets in Resources */,
 			);
@@ -1129,6 +1143,7 @@
 				577A85DE1E5EAA3400834E61 /* LICENSE.md in Sources */,
 				577A85161E5E942300834E61 /* NSObject+Common.m in Sources */,
 				577A85DA1E5EAA3300834E61 /* EXTScope.m in Sources */,
+				577A86051E5FCBEA00834E61 /* HiThirdPartService.m in Sources */,
 				577A85731E5EA86C00834E61 /* JobshowStore.m in Sources */,
 				577A853E1E5E9EB700834E61 /* CYLTabBarControllerConfig.m in Sources */,
 				577A851D1E5E959F00834E61 /* Global.m in Sources */,
@@ -1146,6 +1161,7 @@
 				577A85D81E5EAA3300834E61 /* EXTRuntimeExtensions.m in Sources */,
 				577A85E21E5EAA3400834E61 /* MIPipeline.m in Sources */,
 				577A85EB1E5EAAC100834E61 /* CYNavigationViewController.m in Sources */,
+				577A86081E5FCF1B00834E61 /* BaseNetworking.m in Sources */,
 				577A85E61E5EAA3400834E61 /* MIStore.m in Sources */,
 				577A85E81E5EAA3400834E61 /* UIView+MIPipeline.m in Sources */,
 				577A85741E5EA86C00834E61 /* JobshowView.m in Sources */,
@@ -1156,7 +1172,6 @@
 				577A85E51E5EAA3400834E61 /* MIStorage.m in Sources */,
 				577A85D91E5EAA3300834E61 /* EXTSafeCategory.m in Sources */,
 				577A85321E5E96EC00834E61 /* UIViewController+CYLTabBarControllerExtention.m in Sources */,
-				577A85181E5E942300834E61 /* BaseNetworkAPI.m in Sources */,
 				577A855D1E5EA85700834E61 /* ConselorshowViewController.m in Sources */,
 				577A85E01E5EAA3400834E61 /* MIMediator.m in Sources */,
 				577A85171E5E942300834E61 /* UIImage+Tint.m in Sources */,
@@ -1164,6 +1179,7 @@
 				577A85721E5EA86C00834E61 /* JobshowPipeline.m in Sources */,
 				577A85911E5EA96000834E61 /* MineshowView.m in Sources */,
 				577A85D51E5EAA3300834E61 /* EXTADT.m in Sources */,
+				577A86041E5FCBEA00834E61 /* HiInitData.m in Sources */,
 				577A85E71E5EAA3400834E61 /* MIViewController.m in Sources */,
 				577A85901E5EA96000834E61 /* MineshowStore.m in Sources */,
 				577A858F1E5EA96000834E61 /* MineshowPipeline.m in Sources */,
