@@ -255,4 +255,18 @@ static BaseNetworking *baseApi = nil;
                           };
     [HYBNetworking postWithUrl:@"api/companyjob" refreshCache:YES params:dic success:success fail:fail];
 }
+
+- (void)personCenterDataWith:(NSDictionary *)params
+                     success:(HYBResponseSuccess)success
+                        fail:(HYBResponseFail)fail
+{
+    NSDictionary *dic = @{
+                          @"head": @{
+                                  @"transcode": @"I0001",
+                                  @"type": @"i"
+                                  },
+                          @"data": params
+                          };
+    [HYBNetworking postWithUrl:@"api/companyjob" refreshCache:YES params:dic success:success fail:fail];
+}
 @end

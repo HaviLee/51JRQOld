@@ -172,7 +172,7 @@
                   success:(HYBResponseSuccess)success
                      fail:(HYBResponseFail)fail;
 /**
- 猎头职位收藏
+ 企业职位申请
  
  @param params 参数
  @param success 成功
@@ -182,7 +182,7 @@
                   success:(HYBResponseSuccess)success
                      fail:(HYBResponseFail)fail;
 /**
- 猎头职位收藏
+ 企业职位收藏
  
  @param params 参数
  @param success 成功
@@ -191,4 +191,15 @@
 - (void)collectionCompanyJobWith:(NSDictionary *)params
                   success:(HYBResponseSuccess)success
                      fail:(HYBResponseFail)fail;
+
+/**
+ 个人中心-获取个人中心统计数据
+
+ @param params 参数
+ @param success 成功
+ @param fail 失败
+ */
+- (void)personCenterDataWith:(NSDictionary *)params
+                         success:(HYBResponseSuccess)success
+                            fail:(HYBResponseFail)fail;
 @end

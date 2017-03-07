@@ -14,7 +14,8 @@
 #import "Definations.h"
 #import <YYKit/YYKit.h>
 #import "NSObject+Common.h"
-#import <Masonry/Masonry.h>
+//#import <Masonry/Masonry.h>
+#import "SDAutoLayout.h"
 #import "UIImage+Tint.h"
 #import "CYLTabBarControllerConfig.h"
 #import "CYLPlusButtonSubclass.h"

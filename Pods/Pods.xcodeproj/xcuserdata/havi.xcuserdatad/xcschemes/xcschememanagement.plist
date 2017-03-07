@@ -9,6 +9,16 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>BlockAlertsAnd-ActionSheets.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>IQKeyboardManager.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Masonry.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -37,7 +47,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>0659B71386995AC7EE2A305F0A360EB1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>1EE903B19570CD8B0C15F10ED2FFB377</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>22108ADED92E1ACC99C6865A0622EB9F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -47,7 +67,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>92D9649582FFBA8B26A3994AB95F6B90</key>
+		<key>54EF93E0AD9D3C79187EDCB0B60A3581</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6CB45A276B3117FC43A2502D8E58FB8D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -58,11 +83,6 @@
 			<true/>
 		</dict>
 		<key>9E033EDB5EC0819481B0546434FA577B</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>E967FAC53EA4FA8699A3957D0F720DF7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
