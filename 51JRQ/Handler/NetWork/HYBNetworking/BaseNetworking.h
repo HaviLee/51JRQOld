@@ -202,4 +202,8 @@
 - (void)personCenterDataWith:(NSDictionary *)params
                          success:(HYBResponseSuccess)success
                             fail:(HYBResponseFail)fail;
+
+- (void)getJobDetailDataWith:(NSDictionary *)params
+                     success:(HYBResponseSuccess)success
+                        fail:(HYBResponseFail)fail;
 @end

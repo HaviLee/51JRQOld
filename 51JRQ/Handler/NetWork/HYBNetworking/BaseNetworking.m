@@ -269,4 +269,18 @@ static BaseNetworking *baseApi = nil;
                           };
     [HYBNetworking postWithUrl:@"api/companyjob" refreshCache:YES params:dic success:success fail:fail];
 }
+
+- (void)getJobDetailDataWith:(NSDictionary *)params
+                     success:(HYBResponseSuccess)success
+                        fail:(HYBResponseFail)fail
+{
+    NSDictionary *dic = @{
+                          @"head": @{
+                                  @"transcode": @"L0002",
+                                  @"type": @"i"
+                                  },
+                          @"data": params
+                          };
+    [HYBNetworking postWithUrl:@"api/hunterjob" refreshCache:YES params:dic success:success fail:fail];
+}
 @end

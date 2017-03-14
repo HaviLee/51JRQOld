@@ -10,9 +10,10 @@
 #import "UIView+MIPipeline.h"
 #import "JobshowPipeline.h"
 
-@interface JobshowView ()
+@interface JobshowView ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic, strong) JobshowPipeline *pipeline;
+@property (nonatomic, strong) UITableView *homeTableview;
 
 @end
 
@@ -21,9 +22,28 @@
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
-
+        [self addSubview:self.homeTableview];
     }
     return self;
+}
+
+#pragma mark setter meathod
+- (UITableView *)homeTableview
+{
+    if (!_homeTableview) {
+        _homeTableview = [[UITableView alloc]initWithFrame:CGRectMake(0, 64, kScreenSize.width, kScreenSize.height-49-64) style:UITableViewStyleGrouped];
+        _homeTableview.delegate = self;
+        _homeTableview.dataSource = self;
+
+    }
+    return _homeTableview;
+}
+
+#pragma mark tableView delegate
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    
 }
 
 - (void)setupPipeline:(__kindof MIPipeline *)pipeline {
