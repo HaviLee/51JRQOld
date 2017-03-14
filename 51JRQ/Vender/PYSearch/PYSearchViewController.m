@@ -292,8 +292,10 @@
     self.view.backgroundColor = [UIColor whiteColor];
     self.baseSearchTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidShow:) name:UIKeyboardDidShowNotification object:nil];
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:[NSBundle py_localizedStringForKey:PYSearchCancelButtonText] style:UIBarButtonItemStyleDone target:self action:@selector(cancelDidClick)];
-    
+
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"取消" style:UIBarButtonItemStylePlain target:self action:@selector(cancelDidClick)];
+//    [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"navi_scan_button"] style:UIBarButtonItemStylePlain target:self action:@selector(cancelDidClick)];
+
     /**
      * 设置一些默认设置
      */
@@ -322,7 +324,7 @@
     UIView *titleView = [[UIView alloc] init];
     titleView.py_x = PYSEARCH_MARGIN * 0.5;
     titleView.py_y = 7;
-    titleView.py_width = self.view.py_width - 64 - titleView.py_x * 2;
+    titleView.py_width = self.view.py_width - 57 - 15;
     titleView.py_height = 30;
     UISearchBar *searchBar = [[UISearchBar alloc] initWithFrame:titleView.bounds];
     [titleView addSubview:searchBar];

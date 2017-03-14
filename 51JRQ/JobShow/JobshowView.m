@@ -32,8 +32,8 @@
 {
     if (!_homeTableview) {
         _homeTableview = [[UITableView alloc]initWithFrame:CGRectMake(0, 64, kScreenSize.width, kScreenSize.height-49-64) style:UITableViewStyleGrouped];
-        _homeTableview.delegate = self;
-        _homeTableview.dataSource = self;
+//        _homeTableview.delegate = self;
+//        _homeTableview.dataSource = self;
 
     }
     return _homeTableview;
@@ -41,10 +41,10 @@
 
 #pragma mark tableView delegate
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-    
-}
+//- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+//{
+//    
+//}
 
 - (void)setupPipeline:(__kindof MIPipeline *)pipeline {
     self.pipeline = pipeline;

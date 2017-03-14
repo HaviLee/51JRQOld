@@ -17,6 +17,7 @@
 		5735F3A61E77E32D00504325 /* PYSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5735F39D1E77E32D00504325 /* PYSearchViewController.m */; };
 		5735F3A71E77E32D00504325 /* UIColor+PYSearchExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5735F39F1E77E32D00504325 /* UIColor+PYSearchExtension.m */; };
 		5735F3A81E77E32D00504325 /* UIView+PYSearchExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5735F3A11E77E32D00504325 /* UIView+PYSearchExtension.m */; };
+		5735F3AA1E781E9000504325 /* homeData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5735F3A91E781E9000504325 /* homeData.plist */; };
 		577A84CC1E5E8ED800834E61 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 577A84CB1E5E8ED800834E61 /* main.m */; };
 		577A84CF1E5E8ED800834E61 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 577A84CE1E5E8ED800834E61 /* AppDelegate.m */; };
 		577A84D81E5E8ED800834E61 /* _1JRQ.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 577A84D61E5E8ED800834E61 /* _1JRQ.xcdatamodeld */; };
@@ -148,6 +149,7 @@
 		5735F39F1E77E32D00504325 /* UIColor+PYSearchExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+PYSearchExtension.m"; sourceTree = "<group>"; };
 		5735F3A01E77E32D00504325 /* UIView+PYSearchExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+PYSearchExtension.h"; sourceTree = "<group>"; };
 		5735F3A11E77E32D00504325 /* UIView+PYSearchExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+PYSearchExtension.m"; sourceTree = "<group>"; };
+		5735F3A91E781E9000504325 /* homeData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = homeData.plist; sourceTree = "<group>"; };
 		577A84C71E5E8ED800834E61 /* 51JRQ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 51JRQ.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		577A84CB1E5E8ED800834E61 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		577A84CD1E5E8ED800834E61 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -441,7 +443,7 @@
 				577A85451E5EA3E900834E61 /* MessageShow */,
 				577A85441E5EA3D700834E61 /* ConselorShow */,
 				577A85431E5EA39900834E61 /* CompanyShow */,
-				577A85421E5EA38700834E61 /* JobShow */,
+				577A85421E5EA38700834E61 /* HomeShow */,
 				577A85241E5E96EC00834E61 /* Vender */,
 				577A85001E5E942300834E61 /* Handler */,
 				577A851A1E5E942F00834E61 /* AppDelegate */,
@@ -457,6 +459,7 @@
 				577A84DB1E5E8ED800834E61 /* LaunchScreen.storyboard */,
 				577A84DE1E5E8ED800834E61 /* Info.plist */,
 				5701A7F91E60036400C6CE57 /* ReturnCode.plist */,
+				5735F3A91E781E9000504325 /* homeData.plist */,
 				577A84D61E5E8ED800834E61 /* _1JRQ.xcdatamodeld */,
 				577A84CB1E5E8ED800834E61 /* main.m */,
 				5701A7F71E5FDE6200C6CE57 /* com_51jrq.cer */,
@@ -610,7 +613,7 @@
 			path = CYLTableViewPlaceHolder;
 			sourceTree = "<group>";
 		};
-		577A85421E5EA38700834E61 /* JobShow */ = {
+		577A85421E5EA38700834E61 /* HomeShow */ = {
 			isa = PBXGroup;
 			children = (
 				577A85761E5EA88500834E61 /* Model */,
@@ -618,6 +621,7 @@
 				577A85781E5EA8A400834E61 /* View */,
 				577A85791E5EA8AB00834E61 /* Controller */,
 			);
+			name = HomeShow;
 			path = JobShow;
 			sourceTree = "<group>";
 		};
@@ -1186,6 +1190,7 @@
 				577A84DD1E5E8ED800834E61 /* LaunchScreen.storyboard in Resources */,
 				57ACB2F11E6E87E800D04A4D /* MJRefresh.bundle in Resources */,
 				5735F3A31E77E32D00504325 /* PYSearch.bundle in Resources */,
+				5735F3AA1E781E9000504325 /* homeData.plist in Resources */,
 				577A84DA1E5E8ED800834E61 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
