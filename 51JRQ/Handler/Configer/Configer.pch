@@ -22,5 +22,6 @@
 #import "HYBNetworking.h"
 #import "Minya.h"
 #import "Global.h"
+#import <AFNetworking/UIImageView+AFNetworking.h>
 
 #endif /* Configer_pch */

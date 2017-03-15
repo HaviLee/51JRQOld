@@ -18,6 +18,20 @@
 		5735F3A71E77E32D00504325 /* UIColor+PYSearchExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5735F39F1E77E32D00504325 /* UIColor+PYSearchExtension.m */; };
 		5735F3A81E77E32D00504325 /* UIView+PYSearchExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5735F3A11E77E32D00504325 /* UIView+PYSearchExtension.m */; };
 		5735F3AA1E781E9000504325 /* homeData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5735F3A91E781E9000504325 /* homeData.plist */; };
+		5735F3AD1E7839B500504325 /* NewsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5735F3AC1E7839B500504325 /* NewsTableViewCell.m */; };
+		5735F3B01E7839E800504325 /* ActivityTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5735F3AF1E7839E800504325 /* ActivityTableViewCell.m */; };
+		5735F3B31E783B5200504325 /* TitleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5735F3B21E783B5200504325 /* TitleTableViewCell.m */; };
+		5735F3B71E79382D00504325 /* SYFavoriteButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5735F3B61E79382D00504325 /* SYFavoriteButton.m */; };
+		5735F3BA1E7943C000504325 /* PositionTitleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5735F3B91E7943C000504325 /* PositionTitleTableViewCell.m */; };
+		5735F3BD1E79477200504325 /* PostionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5735F3BC1E79477200504325 /* PostionTableViewCell.m */; };
+		5735F3C11E79777800504325 /* SubLBXScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5735F3C01E79777800504325 /* SubLBXScanViewController.m */; };
+		5735F3C31E79789000504325 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5735F3C21E79789000504325 /* AVFoundation.framework */; };
+		5735F3CE1E79797200504325 /* UIActionSheet+LBXAlertAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 5735F3C71E79797200504325 /* UIActionSheet+LBXAlertAction.m */; };
+		5735F3CF1E79797200504325 /* UIAlertController+supportedInterfaceOrientations.m in Sources */ = {isa = PBXBuildFile; fileRef = 5735F3C91E79797200504325 /* UIAlertController+supportedInterfaceOrientations.m */; };
+		5735F3D01E79797200504325 /* UIAlertView+LBXAlertAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 5735F3CB1E79797200504325 /* UIAlertView+LBXAlertAction.m */; };
+		5735F3D11E79797200504325 /* LBXAlertAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 5735F3CD1E79797200504325 /* LBXAlertAction.m */; };
+		5735F3D41E797B6600504325 /* LBXScanVideoZoomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5735F3D31E797B6600504325 /* LBXScanVideoZoomView.m */; };
+		5735F3D61E797C9200504325 /* CodeScan.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5735F3D51E797C9200504325 /* CodeScan.bundle */; };
 		577A84CC1E5E8ED800834E61 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 577A84CB1E5E8ED800834E61 /* main.m */; };
 		577A84CF1E5E8ED800834E61 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 577A84CE1E5E8ED800834E61 /* AppDelegate.m */; };
 		577A84D81E5E8ED800834E61 /* _1JRQ.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 577A84D61E5E8ED800834E61 /* _1JRQ.xcdatamodeld */; };
@@ -150,6 +164,32 @@
 		5735F3A01E77E32D00504325 /* UIView+PYSearchExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+PYSearchExtension.h"; sourceTree = "<group>"; };
 		5735F3A11E77E32D00504325 /* UIView+PYSearchExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+PYSearchExtension.m"; sourceTree = "<group>"; };
 		5735F3A91E781E9000504325 /* homeData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = homeData.plist; sourceTree = "<group>"; };
+		5735F3AB1E7839B500504325 /* NewsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsTableViewCell.h; sourceTree = "<group>"; };
+		5735F3AC1E7839B500504325 /* NewsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsTableViewCell.m; sourceTree = "<group>"; };
+		5735F3AE1E7839E800504325 /* ActivityTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityTableViewCell.h; sourceTree = "<group>"; };
+		5735F3AF1E7839E800504325 /* ActivityTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityTableViewCell.m; sourceTree = "<group>"; };
+		5735F3B11E783B5200504325 /* TitleTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TitleTableViewCell.h; sourceTree = "<group>"; };
+		5735F3B21E783B5200504325 /* TitleTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TitleTableViewCell.m; sourceTree = "<group>"; };
+		5735F3B51E79382D00504325 /* SYFavoriteButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYFavoriteButton.h; sourceTree = "<group>"; };
+		5735F3B61E79382D00504325 /* SYFavoriteButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYFavoriteButton.m; sourceTree = "<group>"; };
+		5735F3B81E7943C000504325 /* PositionTitleTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PositionTitleTableViewCell.h; sourceTree = "<group>"; };
+		5735F3B91E7943C000504325 /* PositionTitleTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PositionTitleTableViewCell.m; sourceTree = "<group>"; };
+		5735F3BB1E79477200504325 /* PostionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostionTableViewCell.h; sourceTree = "<group>"; };
+		5735F3BC1E79477200504325 /* PostionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostionTableViewCell.m; sourceTree = "<group>"; };
+		5735F3BF1E79777800504325 /* SubLBXScanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubLBXScanViewController.h; sourceTree = "<group>"; };
+		5735F3C01E79777800504325 /* SubLBXScanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubLBXScanViewController.m; sourceTree = "<group>"; };
+		5735F3C21E79789000504325 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		5735F3C61E79797200504325 /* UIActionSheet+LBXAlertAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIActionSheet+LBXAlertAction.h"; sourceTree = "<group>"; };
+		5735F3C71E79797200504325 /* UIActionSheet+LBXAlertAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIActionSheet+LBXAlertAction.m"; sourceTree = "<group>"; };
+		5735F3C81E79797200504325 /* UIAlertController+supportedInterfaceOrientations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+supportedInterfaceOrientations.h"; sourceTree = "<group>"; };
+		5735F3C91E79797200504325 /* UIAlertController+supportedInterfaceOrientations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+supportedInterfaceOrientations.m"; sourceTree = "<group>"; };
+		5735F3CA1E79797200504325 /* UIAlertView+LBXAlertAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+LBXAlertAction.h"; sourceTree = "<group>"; };
+		5735F3CB1E79797200504325 /* UIAlertView+LBXAlertAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+LBXAlertAction.m"; sourceTree = "<group>"; };
+		5735F3CC1E79797200504325 /* LBXAlertAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBXAlertAction.h; sourceTree = "<group>"; };
+		5735F3CD1E79797200504325 /* LBXAlertAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBXAlertAction.m; sourceTree = "<group>"; };
+		5735F3D21E797B6600504325 /* LBXScanVideoZoomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBXScanVideoZoomView.h; sourceTree = "<group>"; };
+		5735F3D31E797B6600504325 /* LBXScanVideoZoomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBXScanVideoZoomView.m; sourceTree = "<group>"; };
+		5735F3D51E797C9200504325 /* CodeScan.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = CodeScan.bundle; sourceTree = "<group>"; };
 		577A84C71E5E8ED800834E61 /* 51JRQ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 51JRQ.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		577A84CB1E5E8ED800834E61 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		577A84CD1E5E8ED800834E61 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -357,6 +397,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5735F3C31E79789000504325 /* AVFoundation.framework in Frameworks */,
 				5D05083804E7E00184B332C6 /* libPods-51JRQ.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -412,6 +453,52 @@
 				5735F3A11E77E32D00504325 /* UIView+PYSearchExtension.m */,
 			);
 			path = PYSearch;
+			sourceTree = "<group>";
+		};
+		5735F3B41E79382D00504325 /* SYFavoriteButton */ = {
+			isa = PBXGroup;
+			children = (
+				5735F3B51E79382D00504325 /* SYFavoriteButton.h */,
+				5735F3B61E79382D00504325 /* SYFavoriteButton.m */,
+			);
+			path = SYFavoriteButton;
+			sourceTree = "<group>";
+		};
+		5735F3BE1E79777800504325 /* LbScan */ = {
+			isa = PBXGroup;
+			children = (
+				5735F3C41E79797200504325 /* LBXAlertAction */,
+				5735F3BF1E79777800504325 /* SubLBXScanViewController.h */,
+				5735F3C01E79777800504325 /* SubLBXScanViewController.m */,
+				5735F3D21E797B6600504325 /* LBXScanVideoZoomView.h */,
+				5735F3D31E797B6600504325 /* LBXScanVideoZoomView.m */,
+				5735F3D51E797C9200504325 /* CodeScan.bundle */,
+			);
+			path = LbScan;
+			sourceTree = "<group>";
+		};
+		5735F3C41E79797200504325 /* LBXAlertAction */ = {
+			isa = PBXGroup;
+			children = (
+				5735F3C51E79797200504325 /* Class */,
+				5735F3CC1E79797200504325 /* LBXAlertAction.h */,
+				5735F3CD1E79797200504325 /* LBXAlertAction.m */,
+			);
+			name = LBXAlertAction;
+			path = 51JRQ/Vender/LBXAlertAction;
+			sourceTree = SOURCE_ROOT;
+		};
+		5735F3C51E79797200504325 /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				5735F3C61E79797200504325 /* UIActionSheet+LBXAlertAction.h */,
+				5735F3C71E79797200504325 /* UIActionSheet+LBXAlertAction.m */,
+				5735F3C81E79797200504325 /* UIAlertController+supportedInterfaceOrientations.h */,
+				5735F3C91E79797200504325 /* UIAlertController+supportedInterfaceOrientations.m */,
+				5735F3CA1E79797200504325 /* UIAlertView+LBXAlertAction.h */,
+				5735F3CB1E79797200504325 /* UIAlertView+LBXAlertAction.m */,
+			);
+			path = Class;
 			sourceTree = "<group>";
 		};
 		577A84BE1E5E8ED800834E61 = {
@@ -568,6 +655,8 @@
 		577A85241E5E96EC00834E61 /* Vender */ = {
 			isa = PBXGroup;
 			children = (
+				5735F3BE1E79777800504325 /* LbScan */,
+				5735F3B41E79382D00504325 /* SYFavoriteButton */,
 				5735F3931E77E32D00504325 /* PYSearch */,
 				57ACB2AE1E6E87E800D04A4D /* MJRefresh */,
 				57ACB2DD1E6E87E800D04A4D /* SDAutoLayout */,
@@ -681,6 +770,16 @@
 			children = (
 				577A856E1E5EA86C00834E61 /* JobshowView.h */,
 				577A856F1E5EA86C00834E61 /* JobshowView.m */,
+				5735F3B11E783B5200504325 /* TitleTableViewCell.h */,
+				5735F3B21E783B5200504325 /* TitleTableViewCell.m */,
+				5735F3AB1E7839B500504325 /* NewsTableViewCell.h */,
+				5735F3AC1E7839B500504325 /* NewsTableViewCell.m */,
+				5735F3AE1E7839E800504325 /* ActivityTableViewCell.h */,
+				5735F3AF1E7839E800504325 /* ActivityTableViewCell.m */,
+				5735F3B81E7943C000504325 /* PositionTitleTableViewCell.h */,
+				5735F3B91E7943C000504325 /* PositionTitleTableViewCell.m */,
+				5735F3BB1E79477200504325 /* PostionTableViewCell.h */,
+				5735F3BC1E79477200504325 /* PostionTableViewCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -1063,6 +1162,7 @@
 		77858E0DB3A0CDD52E37701F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5735F3C21E79789000504325 /* AVFoundation.framework */,
 				C3E5BBFF95CD39B11FC314E4 /* libPods-51JRQ.a */,
 				B1E66E37D7A5FAA262CE6589 /* libPods-51JRQTests.a */,
 				351A57F80F827461D0413DD4 /* libPods-51JRQUITests.a */,
@@ -1146,6 +1246,7 @@
 				TargetAttributes = {
 					577A84C61E5E8ED800834E61 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = CF99UB3L46;
 						ProvisioningStyle = Automatic;
 					};
 					577A84E21E5E8ED800834E61 = {
@@ -1192,6 +1293,7 @@
 				5735F3A31E77E32D00504325 /* PYSearch.bundle in Resources */,
 				5735F3AA1E781E9000504325 /* homeData.plist in Resources */,
 				577A84DA1E5E8ED800834E61 /* Assets.xcassets in Resources */,
+				5735F3D61E797C9200504325 /* CodeScan.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1354,6 +1456,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5735F3B01E7839E800504325 /* ActivityTableViewCell.m in Sources */,
 				57ACB2E51E6E87E800D04A4D /* MJRefreshComponent.m in Sources */,
 				57ACB2EA1E6E87E800D04A4D /* MJRefreshAutoStateFooter.m in Sources */,
 				577A85D31E5EAA3300834E61 /* NSObject+MINotification.m in Sources */,
@@ -1374,8 +1477,10 @@
 				577A853B1E5E9E2D00834E61 /* WeChatStylePlaceHolder.m in Sources */,
 				5735F3A51E77E32D00504325 /* PYSearchSuggestionViewController.m in Sources */,
 				57ACB2F51E6E87E800D04A4D /* UIScrollView+MJRefresh.m in Sources */,
+				5735F3B71E79382D00504325 /* SYFavoriteButton.m in Sources */,
 				577A85151E5E942300834E61 /* NSObject+AdvertisementView.m in Sources */,
 				5735F3A81E77E32D00504325 /* UIView+PYSearchExtension.m in Sources */,
+				5735F3BA1E7943C000504325 /* PositionTitleTableViewCell.m in Sources */,
 				5735F3A61E77E32D00504325 /* PYSearchViewController.m in Sources */,
 				57ACB2E31E6E87E800D04A4D /* MJRefreshAutoFooter.m in Sources */,
 				577A85161E5E942300834E61 /* NSObject+Common.m in Sources */,
@@ -1394,11 +1499,14 @@
 				57ACB2F61E6E87E800D04A4D /* UIView+MJExtension.m in Sources */,
 				577A84CF1E5E8ED800834E61 /* AppDelegate.m in Sources */,
 				577A85681E5EA86200834E61 /* CompanyshowView.m in Sources */,
+				5735F3D11E79797200504325 /* LBXAlertAction.m in Sources */,
 				577A85E31E5EAA3400834E61 /* MIScene.m in Sources */,
+				5735F3BD1E79477200504325 /* PostionTableViewCell.m in Sources */,
 				577A852F1E5E96EC00834E61 /* CYLPlusButton.m in Sources */,
 				577A85691E5EA86200834E61 /* CompanyshowViewController.m in Sources */,
 				577A85671E5EA86200834E61 /* CompanyshowStore.m in Sources */,
 				577A85D81E5EAA3300834E61 /* EXTRuntimeExtensions.m in Sources */,
+				5735F3CF1E79797200504325 /* UIAlertController+supportedInterfaceOrientations.m in Sources */,
 				577A85E21E5EAA3400834E61 /* MIPipeline.m in Sources */,
 				577A85EB1E5EAAC100834E61 /* CYNavigationViewController.m in Sources */,
 				577A86081E5FCF1B00834E61 /* BaseNetworking.m in Sources */,
@@ -1407,6 +1515,7 @@
 				577A85741E5EA86C00834E61 /* JobshowView.m in Sources */,
 				57ACB2F81E6E87E800D04A4D /* UIView+SDAutoLayout.m in Sources */,
 				577A85511E5EA84D00834E61 /* MessageshowViewController.m in Sources */,
+				5735F3AD1E7839B500504325 /* NewsTableViewCell.m in Sources */,
 				577A854E1E5EA84D00834E61 /* MessageshowPipeline.m in Sources */,
 				57ACB2EF1E6E87E800D04A4D /* MJRefreshNormalHeader.m in Sources */,
 				577A85D11E5EAA3300834E61 /* NSObject+MIDealloc.m in Sources */,
@@ -1423,12 +1532,15 @@
 				577A85171E5E942300834E61 /* UIImage+Tint.m in Sources */,
 				57ACB2E61E6E87E800D04A4D /* MJRefreshFooter.m in Sources */,
 				577A85D41E5EAA3300834E61 /* NSObject+MISwizzle.m in Sources */,
+				5735F3D01E79797200504325 /* UIAlertView+LBXAlertAction.m in Sources */,
 				577A85721E5EA86C00834E61 /* JobshowPipeline.m in Sources */,
 				577A85911E5EA96000834E61 /* MineshowView.m in Sources */,
 				577A85D51E5EAA3300834E61 /* EXTADT.m in Sources */,
+				5735F3B31E783B5200504325 /* TitleTableViewCell.m in Sources */,
 				577A86041E5FCBEA00834E61 /* HiInitData.m in Sources */,
 				577A85E71E5EAA3400834E61 /* MIViewController.m in Sources */,
 				577A85901E5EA96000834E61 /* MineshowStore.m in Sources */,
+				5735F3CE1E79797200504325 /* UIActionSheet+LBXAlertAction.m in Sources */,
 				577A858F1E5EA96000834E61 /* MineshowPipeline.m in Sources */,
 				577A85661E5EA86200834E61 /* CompanyshowPipeline.m in Sources */,
 				577A85411E5E9F0100834E61 /* CYLPlusButtonSubclass.m in Sources */,
@@ -1440,8 +1552,10 @@
 				57ACB2ED1E6E87E800D04A4D /* MJRefreshBackStateFooter.m in Sources */,
 				57ACB2F01E6E87E800D04A4D /* MJRefreshStateHeader.m in Sources */,
 				577A855A1E5EA85700834E61 /* ConselorshowPipeline.m in Sources */,
+				5735F3C11E79777800504325 /* SubLBXScanViewController.m in Sources */,
 				577A85311E5E96EC00834E61 /* CYLTabBarController.m in Sources */,
 				577A855B1E5EA85700834E61 /* ConselorshowStore.m in Sources */,
+				5735F3D41E797B6600504325 /* LBXScanVideoZoomView.m in Sources */,
 				577A85141E5E942300834E61 /* AdvertisementView.m in Sources */,
 				577A84D81E5E8ED800834E61 /* _1JRQ.xcdatamodeld in Sources */,
 				577A854F1E5EA84D00834E61 /* MessageshowStore.m in Sources */,
@@ -1585,11 +1699,12 @@
 			baseConfigurationReference = 1C6197432DB36FBDB5960134 /* Pods-51JRQ.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = CF99UB3L46;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/51JRQ/Handler/Configer/Configer.pch";
 				INFOPLIST_FILE = 51JRQ/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "havi.-1JRQ";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ihotkeys.ihotkeys;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -1599,11 +1714,12 @@
 			baseConfigurationReference = 7297EB8E1B1A94E4BDD269CA /* Pods-51JRQ.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = CF99UB3L46;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/51JRQ/Handler/Configer/Configer.pch";
 				INFOPLIST_FILE = 51JRQ/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "havi.-1JRQ";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ihotkeys.ihotkeys;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

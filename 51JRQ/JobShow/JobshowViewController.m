@@ -13,6 +13,11 @@
 #import "PYSearchViewController.h"
 #import "UIView+PYSearchExtension.h"
 #import "NSBundle+PYSearchExtension.h"
+#import <AVFoundation/AVCaptureDevice.h>
+#import <AVFoundation/AVMediaFormat.h>
+#import "LBXAlertAction.h"
+#import "LBXScanViewStyle.h"
+#import "SubLBXScanViewController.h"
 
 @interface JobshowViewController ()<UISearchBarDelegate,PYSearchViewControllerDelegate>
 
@@ -114,7 +119,7 @@
     searchViewController.hotSearchStyle = PYHotSearchStyleARCBorderTag; // 热门搜索风格根据选择
     searchViewController.searchHistoryStyle = PYHotSearchStyleDefault; // 搜索历史风格为default
     searchViewController.hotSearchStyle = PYHotSearchStyleDefault; // 热门搜索风格为默认
-    searchViewController.searchHistoryStyle = PYSearchHistoryStyleARCBorderTag; // 搜索历史风格根据选择
+    searchViewController.searchHistoryStyle = PYSearchHistoryStyleBorderTag; // 搜索历史风格根据选择
         // 4. 设置代理
     searchViewController.delegate = self;
         // 5. 跳转到搜索控制器
@@ -125,8 +130,88 @@
 - (void)scanButtonTap
 {
     DeBugLog(@"scanbutton tap");
+    if (![self cameraPemission])
+    {
+        [self showError:@"没有摄像机权限"];
+        return;
+    }
+    [self ZhiFuBaoStyle];
 }
 
+- (void)showError:(NSString*)str
+{
+    [LBXAlertAction showAlertWithTitle:@"提示" msg:str chooseBlock:nil buttonsStatement:@"知道了",nil];
+}
+
+- (BOOL)cameraPemission
+{
+
+    BOOL isHavePemission = NO;
+    if ([AVCaptureDevice respondsToSelector:@selector(authorizationStatusForMediaType:)])
+    {
+        AVAuthorizationStatus permission =
+        [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeVideo];
+
+        switch (permission) {
+            case AVAuthorizationStatusAuthorized:
+                isHavePemission = YES;
+                break;
+            case AVAuthorizationStatusDenied:
+            case AVAuthorizationStatusRestricted:
+                break;
+            case AVAuthorizationStatusNotDetermined:
+                isHavePemission = YES;
+                break;
+        }
+    }
+
+    return isHavePemission;
+}
+
+#pragma mark --模仿支付宝
+- (void)ZhiFuBaoStyle
+{
+        //设置扫码区域参数
+    LBXScanViewStyle *style = [[LBXScanViewStyle alloc]init];
+    style.centerUpOffset = 60;
+    style.xScanRetangleOffset = 30;
+
+    if ([UIScreen mainScreen].bounds.size.height <= 480 )
+    {
+            //3.5inch 显示的扫码缩小
+        style.centerUpOffset = 40;
+        style.xScanRetangleOffset = 20;
+    }
+
+
+    style.alpa_notRecoginitonArea = 0.6;
+
+    style.photoframeAngleStyle = LBXScanViewPhotoframeAngleStyle_Inner;
+    style.photoframeLineW = 2.0;
+    style.photoframeAngleW = 16;
+    style.photoframeAngleH = 16;
+
+    style.isNeedShowRetangle = NO;
+
+    style.anmiationStyle = LBXScanViewAnimationStyle_NetGrid;
+
+        //使用的支付宝里面网格图片
+    UIImage *imgFullNet = [UIImage imageNamed:@"CodeScan.bundle/qrcode_scan_full_net"];
+
+
+    style.animationImage = imgFullNet;
+
+
+    [self openScanVCWithStyle:style];
+}
+
+- (void)openScanVCWithStyle:(LBXScanViewStyle*)style
+{
+    SubLBXScanViewController *vc = [SubLBXScanViewController new];
+    vc.style = style;
+        //vc.isOpenInterestRect = YES;
+    [self.navigationController pushViewController:vc animated:YES];
+}
 
 - (void)setupPipeline:(__kindof MIPipeline *)pipeline {
     self.pipeline = pipeline;
