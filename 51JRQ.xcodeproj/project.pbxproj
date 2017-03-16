@@ -32,6 +32,12 @@
 		5735F3D11E79797200504325 /* LBXAlertAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 5735F3CD1E79797200504325 /* LBXAlertAction.m */; };
 		5735F3D41E797B6600504325 /* LBXScanVideoZoomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5735F3D31E797B6600504325 /* LBXScanVideoZoomView.m */; };
 		5735F3D61E797C9200504325 /* CodeScan.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5735F3D51E797C9200504325 /* CodeScan.bundle */; };
+		5735F3DD1E7A280900504325 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 5735F3D81E7A280900504325 /* .gitkeep */; };
+		5735F3DE1E7A280900504325 /* TTGTagCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5735F3DA1E7A280900504325 /* TTGTagCollectionView.m */; };
+		5735F3DF1E7A280900504325 /* TTGTextTagCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5735F3DC1E7A280900504325 /* TTGTextTagCollectionView.m */; };
+		5735F3E21E7A349C00504325 /* TagFilterTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5735F3E11E7A349C00504325 /* TagFilterTableViewCell.m */; };
+		5735F3E91E7A555D00504325 /* LMDropdownView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5735F3E51E7A555D00504325 /* LMDropdownView.m */; };
+		5735F3EA1E7A555D00504325 /* UIImage+LMExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5735F3E81E7A555D00504325 /* UIImage+LMExtension.m */; };
 		577A84CC1E5E8ED800834E61 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 577A84CB1E5E8ED800834E61 /* main.m */; };
 		577A84CF1E5E8ED800834E61 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 577A84CE1E5E8ED800834E61 /* AppDelegate.m */; };
 		577A84D81E5E8ED800834E61 /* _1JRQ.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 577A84D61E5E8ED800834E61 /* _1JRQ.xcdatamodeld */; };
@@ -190,6 +196,17 @@
 		5735F3D21E797B6600504325 /* LBXScanVideoZoomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBXScanVideoZoomView.h; sourceTree = "<group>"; };
 		5735F3D31E797B6600504325 /* LBXScanVideoZoomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBXScanVideoZoomView.m; sourceTree = "<group>"; };
 		5735F3D51E797C9200504325 /* CodeScan.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = CodeScan.bundle; sourceTree = "<group>"; };
+		5735F3D81E7A280900504325 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		5735F3D91E7A280900504325 /* TTGTagCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTGTagCollectionView.h; sourceTree = "<group>"; };
+		5735F3DA1E7A280900504325 /* TTGTagCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTGTagCollectionView.m; sourceTree = "<group>"; };
+		5735F3DB1E7A280900504325 /* TTGTextTagCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTGTextTagCollectionView.h; sourceTree = "<group>"; };
+		5735F3DC1E7A280900504325 /* TTGTextTagCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTGTextTagCollectionView.m; sourceTree = "<group>"; };
+		5735F3E01E7A349C00504325 /* TagFilterTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TagFilterTableViewCell.h; sourceTree = "<group>"; };
+		5735F3E11E7A349C00504325 /* TagFilterTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TagFilterTableViewCell.m; sourceTree = "<group>"; };
+		5735F3E41E7A555D00504325 /* LMDropdownView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMDropdownView.h; sourceTree = "<group>"; };
+		5735F3E51E7A555D00504325 /* LMDropdownView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMDropdownView.m; sourceTree = "<group>"; };
+		5735F3E71E7A555D00504325 /* UIImage+LMExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+LMExtension.h"; sourceTree = "<group>"; };
+		5735F3E81E7A555D00504325 /* UIImage+LMExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+LMExtension.m"; sourceTree = "<group>"; };
 		577A84C71E5E8ED800834E61 /* 51JRQ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 51JRQ.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		577A84CB1E5E8ED800834E61 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		577A84CD1E5E8ED800834E61 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -501,6 +518,37 @@
 			path = Class;
 			sourceTree = "<group>";
 		};
+		5735F3D71E7A280900504325 /* TagView */ = {
+			isa = PBXGroup;
+			children = (
+				5735F3D81E7A280900504325 /* .gitkeep */,
+				5735F3D91E7A280900504325 /* TTGTagCollectionView.h */,
+				5735F3DA1E7A280900504325 /* TTGTagCollectionView.m */,
+				5735F3DB1E7A280900504325 /* TTGTextTagCollectionView.h */,
+				5735F3DC1E7A280900504325 /* TTGTextTagCollectionView.m */,
+			);
+			path = TagView;
+			sourceTree = "<group>";
+		};
+		5735F3E31E7A555D00504325 /* LMDropdownView */ = {
+			isa = PBXGroup;
+			children = (
+				5735F3E41E7A555D00504325 /* LMDropdownView.h */,
+				5735F3E51E7A555D00504325 /* LMDropdownView.m */,
+				5735F3E61E7A555D00504325 /* Vender */,
+			);
+			path = LMDropdownView;
+			sourceTree = "<group>";
+		};
+		5735F3E61E7A555D00504325 /* Vender */ = {
+			isa = PBXGroup;
+			children = (
+				5735F3E71E7A555D00504325 /* UIImage+LMExtension.h */,
+				5735F3E81E7A555D00504325 /* UIImage+LMExtension.m */,
+			);
+			path = Vender;
+			sourceTree = "<group>";
+		};
 		577A84BE1E5E8ED800834E61 = {
 			isa = PBXGroup;
 			children = (
@@ -529,7 +577,7 @@
 				577A85861E5EA96000834E61 /* MineShow */,
 				577A85451E5EA3E900834E61 /* MessageShow */,
 				577A85441E5EA3D700834E61 /* ConselorShow */,
-				577A85431E5EA39900834E61 /* CompanyShow */,
+				577A85431E5EA39900834E61 /* JobShow */,
 				577A85421E5EA38700834E61 /* HomeShow */,
 				577A85241E5E96EC00834E61 /* Vender */,
 				577A85001E5E942300834E61 /* Handler */,
@@ -655,6 +703,8 @@
 		577A85241E5E96EC00834E61 /* Vender */ = {
 			isa = PBXGroup;
 			children = (
+				5735F3E31E7A555D00504325 /* LMDropdownView */,
+				5735F3D71E7A280900504325 /* TagView */,
 				5735F3BE1E79777800504325 /* LbScan */,
 				5735F3B41E79382D00504325 /* SYFavoriteButton */,
 				5735F3931E77E32D00504325 /* PYSearch */,
@@ -714,7 +764,7 @@
 			path = JobShow;
 			sourceTree = "<group>";
 		};
-		577A85431E5EA39900834E61 /* CompanyShow */ = {
+		577A85431E5EA39900834E61 /* JobShow */ = {
 			isa = PBXGroup;
 			children = (
 				577A857A1E5EA8B500834E61 /* Model */,
@@ -722,6 +772,7 @@
 				577A857C1E5EA8D300834E61 /* View */,
 				577A857D1E5EA8D900834E61 /* Controller */,
 			);
+			name = JobShow;
 			path = CompanyShow;
 			sourceTree = "<group>";
 		};
@@ -816,6 +867,8 @@
 			children = (
 				577A85621E5EA86200834E61 /* CompanyshowView.h */,
 				577A85631E5EA86200834E61 /* CompanyshowView.m */,
+				5735F3E01E7A349C00504325 /* TagFilterTableViewCell.h */,
+				5735F3E11E7A349C00504325 /* TagFilterTableViewCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -1289,6 +1342,7 @@
 				5701A7F81E5FDE6200C6CE57 /* com_51jrq.cer in Resources */,
 				5701A7FA1E60036400C6CE57 /* ReturnCode.plist in Resources */,
 				577A84DD1E5E8ED800834E61 /* LaunchScreen.storyboard in Resources */,
+				5735F3DD1E7A280900504325 /* .gitkeep in Resources */,
 				57ACB2F11E6E87E800D04A4D /* MJRefresh.bundle in Resources */,
 				5735F3A31E77E32D00504325 /* PYSearch.bundle in Resources */,
 				5735F3AA1E781E9000504325 /* homeData.plist in Resources */,
@@ -1456,6 +1510,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5735F3EA1E7A555D00504325 /* UIImage+LMExtension.m in Sources */,
 				5735F3B01E7839E800504325 /* ActivityTableViewCell.m in Sources */,
 				57ACB2E51E6E87E800D04A4D /* MJRefreshComponent.m in Sources */,
 				57ACB2EA1E6E87E800D04A4D /* MJRefreshAutoStateFooter.m in Sources */,
@@ -1517,6 +1572,7 @@
 				577A85511E5EA84D00834E61 /* MessageshowViewController.m in Sources */,
 				5735F3AD1E7839B500504325 /* NewsTableViewCell.m in Sources */,
 				577A854E1E5EA84D00834E61 /* MessageshowPipeline.m in Sources */,
+				5735F3DE1E7A280900504325 /* TTGTagCollectionView.m in Sources */,
 				57ACB2EF1E6E87E800D04A4D /* MJRefreshNormalHeader.m in Sources */,
 				577A85D11E5EAA3300834E61 /* NSObject+MIDealloc.m in Sources */,
 				577A85E41E5EAA3400834E61 /* MIService.m in Sources */,
@@ -1525,6 +1581,7 @@
 				57ACB2E41E6E87E800D04A4D /* MJRefreshBackFooter.m in Sources */,
 				57ACB2EC1E6E87E800D04A4D /* MJRefreshBackNormalFooter.m in Sources */,
 				577A85D91E5EAA3300834E61 /* EXTSafeCategory.m in Sources */,
+				5735F3E21E7A349C00504325 /* TagFilterTableViewCell.m in Sources */,
 				577A85321E5E96EC00834E61 /* UIViewController+CYLTabBarControllerExtention.m in Sources */,
 				577A855D1E5EA85700834E61 /* ConselorshowViewController.m in Sources */,
 				57ACB2E71E6E87E800D04A4D /* MJRefreshHeader.m in Sources */,
@@ -1546,6 +1603,7 @@
 				577A85411E5E9F0100834E61 /* CYLPlusButtonSubclass.m in Sources */,
 				577A85DD1E5EAA3400834E61 /* NSMethodSignature+EXT.m in Sources */,
 				577A84CC1E5E8ED800834E61 /* main.m in Sources */,
+				5735F3E91E7A555D00504325 /* LMDropdownView.m in Sources */,
 				577A85501E5EA84D00834E61 /* MessageshowView.m in Sources */,
 				57ACB2EB1E6E87E800D04A4D /* MJRefreshBackGifFooter.m in Sources */,
 				577A85DC1E5EAA3300834E61 /* NSInvocation+EXT.m in Sources */,
@@ -1559,6 +1617,7 @@
 				577A85141E5E942300834E61 /* AdvertisementView.m in Sources */,
 				577A84D81E5E8ED800834E61 /* _1JRQ.xcdatamodeld in Sources */,
 				577A854F1E5EA84D00834E61 /* MessageshowStore.m in Sources */,
+				5735F3DF1E7A280900504325 /* TTGTextTagCollectionView.m in Sources */,
 				577A85191E5E942300834E61 /* HYBNetworking.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -22,8 +22,8 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 
     #pragma mark 设置tabbar
-    CYLTabBarControllerConfig *tabBarControllerConfig = [[CYLTabBarControllerConfig alloc] init];
-    self.window.rootViewController = tabBarControllerConfig.tabBarController;
+    _tabBarControllerConfig = [[CYLTabBarControllerConfig alloc] init];
+    self.window.rootViewController = _tabBarControllerConfig.tabBarController;
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;

@@ -58,6 +58,7 @@
     
     // Set up pipeline
     [self setupPipeline:self.store.pipeline];
+    self.automaticallyAdjustsScrollViewInsets = NO;
     [self.view setupPipeline:self.store.pipeline];
     
     // Add observers of the pipeline data.

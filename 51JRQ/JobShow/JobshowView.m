@@ -41,7 +41,7 @@
 - (UITableView *)homeTableview
 {
     if (!_homeTableview) {
-        _homeTableview = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, kScreenSize.width, kScreenSize.height) style:UITableViewStyleGrouped];
+        _homeTableview = [[UITableView alloc]initWithFrame:CGRectMake(0, 64, kScreenSize.width, kScreenSize.height-64-49) style:UITableViewStyleGrouped];
         _homeTableview.delegate = self;
         _homeTableview.dataSource = self;
         _homeTableview.separatorStyle = UITableViewCellSeparatorStyleSingleLine;

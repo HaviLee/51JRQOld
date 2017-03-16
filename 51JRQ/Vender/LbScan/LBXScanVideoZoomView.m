@@ -8,8 +8,6 @@
 
 #import "LBXScanVideoZoomView.h"
 
-
-
 @interface LBXScanVideoZoomView()
 @property (nonatomic, strong) UISlider *slider;
 @end

@@ -15,6 +15,8 @@
 
 @property (readonly, strong) NSPersistentContainer *persistentContainer;
 
+@property (strong, nonatomic) CYLTabBarControllerConfig *tabBarControllerConfig;
+
 - (void)saveContext;
 
 
