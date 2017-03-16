@@ -16,7 +16,7 @@
         _tagTextColor = [UIColor whiteColor];
         _tagSelectedTextColor = [UIColor whiteColor];
         
-        _tagBackgroundColor = [UIColor colorWithRed:0.30 green:0.72 blue:0.53 alpha:1.00];
+        _tagBackgroundColor = [UIColor clearColor];
         _tagSelectedBackgroundColor = [UIColor colorWithRed:0.22 green:0.29 blue:0.36 alpha:1.00];
         
         _tagCornerRadius = 4.0f;
@@ -28,10 +28,10 @@
         _tagBorderColor = [UIColor whiteColor];
         _tagSelectedBorderColor = [UIColor whiteColor];
         
-        _tagShadowColor = [UIColor blackColor];
-        _tagShadowOffset = CGSizeMake(2, 2);
-        _tagShadowRadius = 2;
-        _tagShadowOpacity = 0.3f;
+        _tagShadowColor = [UIColor clearColor];
+        _tagShadowOffset = CGSizeMake(0, 0);
+        _tagShadowRadius = 0;
+        _tagShadowOpacity = 0.0f;
         
         _tagExtraSpace = CGSizeMake(14, 14);
     }

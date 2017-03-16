@@ -7,6 +7,7 @@
 //
 #import "CYLTabBarControllerConfig.h"
 #import "CYNavigationViewController.h"
+#import "WMPageController.h"
 @interface CYLBaseNavigationController : UINavigationController
 @end
 
@@ -50,11 +51,11 @@
     UIViewController *jobShowController = [[MIMediator sharedMediator] viewControllerWithScene:jobShow context:nil];
     UIViewController *jobNavigationController = [[CYNavigationViewController alloc]
                                                   initWithRootViewController:jobShowController];
-
+    WMPageController *pageController = [self pageControllerStyleFlood];
     MIScene *companyScene = [MIScene sceneWithView:@"CompanyshowView" controller:@"CompanyshowViewController" store:@"CompanyshowStore"];
     UIViewController *companyViewController = [[MIMediator sharedMediator] viewControllerWithScene:companyScene context:nil];
     UIViewController *companyNavigationController = [[CYNavigationViewController alloc]
-                                                  initWithRootViewController:companyViewController];
+                                                  initWithRootViewController:pageController];
 
     MIScene *conselorScene = [MIScene sceneWithView:@"ConselorshowView" controller:@"ConselorshowViewController" store:@"ConselorshowStore"];
     UIViewController *conselorViewController = [[MIMediator sharedMediator] viewControllerWithScene:conselorScene context:nil];
@@ -75,6 +76,32 @@
                                  ];
     return viewControllers;
 }
+
+- (WMPageController *)pageControllerStyleFlood {
+
+    MIScene *companyScene = [MIScene sceneWithView:@"CompanyshowView" controller:@"CompanyshowViewController" store:@"CompanyshowStore"];
+    UIViewController *companyViewController = [[MIMediator sharedMediator] viewControllerWithScene:companyScene context:nil];
+    MIScene *conselorScene = [MIScene sceneWithView:@"ConselorshowView" controller:@"ConselorshowViewController" store:@"ConselorshowStore"];
+    UIViewController *conselorViewController = [[MIMediator sharedMediator] viewControllerWithScene:conselorScene context:nil];
+    NSArray *viewControllers = @[@"Company",@"Conselor"];
+    NSArray *titles = @[@"企业职位", @"猎头职位"];
+
+    WMPageController *pageVC = [[WMPageController alloc] initWithViewControllerClasses:viewControllers andTheirTitles:titles];
+    pageVC.menuHeight = 33.3;
+    pageVC.showOnNavigationBar = YES;
+    pageVC.titleSizeSelected = 16;
+    pageVC.titleSizeNormal = 16;
+    pageVC.progressViewCornerRadius = 6.7;
+    pageVC.menuViewStyle = WMMenuViewStyleSegmented;
+    pageVC.menuViewLayoutMode = WMMenuViewLayoutModeCenter;
+    pageVC.titleColorSelected = kNaviBarBackColor;
+    pageVC.titleColorNormal = [UIColor whiteColor];
+    pageVC.progressColor = [UIColor whiteColor];
+    pageVC.pageAnimatable = YES;
+    pageVC.itemsWidths = @[@(100),@(100)]; // 这里可以设置不同的宽度
+    return pageVC;
+}
+
 
 - (NSArray *)tabBarItemsAttributesForController {
     NSDictionary *firstTabBarItemsAttributes = @{
@@ -111,7 +138,6 @@
  *  更多TabBar自定义设置：比如：tabBarItem 的选中和不选中文字和背景图片属性、tabbar 背景图片属性等等
  */
 - (void)customizeTabBarAppearance:(CYLTabBarController *)tabBarController {
-#warning CUSTOMIZE YOUR TABBAR APPEARANCE
     // Customize UITabBar height
     // 自定义 TabBar 高度
      tabBarController.tabBarHeight = 49.f;
@@ -119,12 +145,12 @@
     // set the text color for unselected state
     // 普通状态下的文字属性
     NSMutableDictionary *normalAttrs = [NSMutableDictionary dictionary];
-    normalAttrs[NSForegroundColorAttributeName] = [UIColor grayColor];
+    normalAttrs[NSForegroundColorAttributeName] = [UIColor whiteColor];
     
     // set the text color for selected state
     // 选中状态下的文字属性
     NSMutableDictionary *selectedAttrs = [NSMutableDictionary dictionary];
-    selectedAttrs[NSForegroundColorAttributeName] = [UIColor blackColor];
+    selectedAttrs[NSForegroundColorAttributeName] = kNaviBarBackColor;
     
     // set the text Attributes
     // 设置文字属性
@@ -145,7 +171,7 @@
     // set the bar shadow image
     // This shadow image attribute is ignored if the tab bar does not also have a custom background image.So at least set somthing.
     [[UITabBar appearance] setBackgroundImage:[[UIImage alloc] init]];
-    [[UITabBar appearance] setBackgroundColor:[UIColor whiteColor]];
+    [[UITabBar appearance] setBackgroundColor:kTabbarBackColor];
     [[UITabBar appearance] setShadowImage:[UIImage imageNamed:@"tapbar_top_line"]];
     
     // set the bar background image

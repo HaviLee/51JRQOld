@@ -57,7 +57,9 @@
 #endif
 
 //cell 颜色效果
-#define kNaviBarBackColor        [UIColor colorWithRed:0.380 green:0.255 blue:0.224 alpha:1.00]
+#define kRealSize(size)          (size/1.5)
+#define kNaviBarBackColor        [UIColor colorWithRed:0.984 green:0.431 blue:0.020 alpha:1.00]
+#define kTabbarBackColor         [UIColor colorWithRed:0.239 green:0.204 blue:0.216 alpha:1.00]
 #define kHomeOrderBarColor       [UIColor colorWithRed:0.945 green:0.784 blue:0.478 alpha:1.00]
 #define kCarOrderBarColor        [UIColor colorWithRed:0.475 green:0.659 blue:0.565 alpha:1.00]
 #define kFocusTextColor          [UIColor colorWithRed:0.890 green:0.502 blue:0.400 alpha:1.00]
