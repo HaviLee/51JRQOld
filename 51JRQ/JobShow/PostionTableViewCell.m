@@ -47,10 +47,11 @@
         _companyName.text = @"海擎金融有限公司";
         _companyLocation.text = @"上海市科海大楼8楼";
         _moneyChoice.text = @"10k-15k";
-        _positionTitle.font = [UIFont systemFontOfSize:15 weight:3];
-        _companyName.font = [UIFont systemFontOfSize:12];
-        _companyLocation.font = [UIFont systemFontOfSize:12];
-        _moneyChoice.font = [UIFont systemFontOfSize:15];
+        _positionTitle.font = k30WeightWordFont;
+        _companyName.font = k24NormalWordFont;
+        _companyLocation.font = k24NormalWordFont;
+        _moneyChoice.font = k24WeightWordFont;
+        _moneyChoice.textColor = kTabbarBackColor;
 
         [self.contentView sd_addSubviews:@[_positionTitle,_companyName,_companyLocation,_moneyChoice]];
 

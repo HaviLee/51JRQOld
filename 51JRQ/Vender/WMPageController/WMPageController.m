@@ -43,6 +43,8 @@ static NSInteger const kWMControllerCountUndefined = -1;
 @property (nonatomic, strong) NSArray *allTags;
 @property (nonatomic, strong) NSMutableArray *cellInfos;
 
+@property (nonatomic, strong) UIView *buttonBackView;
+@property (nonatomic, strong) UIView *backView;
 
 @end
 
@@ -1016,14 +1018,26 @@ static NSInteger const kWMControllerCountUndefined = -1;
         [self.dropdownView hide];
     }
     appdel.tabBarControllerConfig.tabBarController.tabBar.hidden = YES;
-    self.dropdownView.contentBackgroundColor = [UIColor clearColor];
-    [self.dropdownView showInView:self.navigationController.visibleViewController.view withContentView:self.tagTableView atOrigin:CGPointMake(0, 64)];
+    self.dropdownView.contentBackgroundColor = [UIColor whiteColor];
+    [self.dropdownView showInView:self.navigationController.visibleViewController.view withContentView:self.backView atOrigin:CGPointMake(0, 64)];
+}
+
+- (UIView *)backView
+{
+    if (!_backView) {
+        _backView = [[UIView alloc]init];
+        _backView.frame = CGRectMake(0, 64, kScreenSize.width, kScreenSize.height-64);
+        _backView.backgroundColor = [UIColor whiteColor];
+        [_backView addSubview:self.tagTableView];
+        [_backView addSubview:self.buttonBackView];
+    }
+    return _backView;
 }
 
 - (UITableView*)tagTableView
 {
     if (!_tagTableView) {
-        _tagTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 64, kScreenSize.width, kScreenSize.height-64) style:UITableViewStylePlain];
+        _tagTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, kScreenSize.width, kScreenSize.height-64-64) style:UITableViewStylePlain];
         _tagTableView.delegate = self;
         _tagTableView.dataSource = self;
         _tagTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
@@ -1036,6 +1050,66 @@ static NSInteger const kWMControllerCountUndefined = -1;
     return _tagTableView;
 }
 
+- (UIView*)buttonBackView
+{
+    if (!_buttonBackView) {
+        _buttonBackView = [[UIView alloc]init];
+        _buttonBackView.frame = CGRectMake(0, kScreenSize.height-64-64, kScreenSize.width, 64);
+        _buttonBackView.layer.borderWidth = 1;
+        _buttonBackView.layer.borderColor = [UIColor colorWithRed:0.627 green:0.627 blue:0.627 alpha:.30].CGColor;
+        _buttonBackView.backgroundColor = [UIColor clearColor];
+        UIButton *cancelButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        cancelButton.frame = CGRectMake(20, 12, (kScreenSize.width-55)/2, 40);
+        [cancelButton setTitle:@"取消筛选" forState:UIControlStateNormal];
+        [cancelButton addTarget:self action:@selector(cancelSelect) forControlEvents:UIControlEventTouchUpInside];
+        [cancelButton setTitleColor:kFocusTextColor forState:UIControlStateNormal];
+        cancelButton.layer.borderColor = kFocusTextColor.CGColor;
+        cancelButton.layer.borderWidth = 1;
+        cancelButton.layer.cornerRadius = 5;
+        cancelButton.layer.masksToBounds = YES;
+
+        UIButton *sureButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        sureButton.frame = CGRectMake(35 + (kScreenSize.width-45)/2, 12, (kScreenSize.width-45)/2, 40);
+        [sureButton setTitle:@"确定" forState:UIControlStateNormal];
+        [sureButton addTarget:self action:@selector(sureSelect) forControlEvents:UIControlEventTouchUpInside];
+        [sureButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        sureButton.backgroundColor = kFocusTextColor;
+        sureButton.layer.cornerRadius = 5;
+        sureButton.layer.masksToBounds = YES;
+        [_buttonBackView addSubview:cancelButton];
+        [_buttonBackView addSubview:sureButton];
+
+    }
+    return _buttonBackView;
+}
+
+- (void)cancelSelect
+{
+    [self.dropdownView hide];
+}
+
+- (void)sureSelect
+{
+    [self.dropdownView hide];
+    [self getAllTags];
+
+}
+
+- (void)getAllTags
+{
+    NSMutableArray *tagArr = @[].mutableCopy;
+    for (int i = 0; i<_cellInfos.count; i++) {
+        TagsFilterTableViewCell *cell = [self.tagTableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:i inSection:0]];
+        NSArray *tags = [cell.tagListView allSelectedTags];
+        if (tags.count>0) {
+            [tagArr addObject:tags.firstObject];
+        }
+    }
+    for (NSString *a in tagArr) {
+
+        DeBugLog(@"%@",a);
+    }
+}
 #pragma mark - Table view data source
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -1046,7 +1120,21 @@ static NSInteger const kWMControllerCountUndefined = -1;
     TagsFilterTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([TagsFilterTableViewCell class])
                                                                     forIndexPath:indexPath];
     [cell setTags:_cellInfos[(NSUInteger) indexPath.row]];
-    cell.tagTitle.text = [NSString stringWithFormat:@"Cell: %ld", (long)indexPath.row];
+    switch (indexPath.row) {
+        case 0:
+            cell.tagTitle.text = @"城市";
+            break;
+        case 1:
+            cell.tagTitle.text = @"行业";
+            break;
+        case 2:
+            cell.tagTitle.text = @"发布时间";
+            break;
+
+        default:
+            break;
+    }
+
     return cell;
 }
 

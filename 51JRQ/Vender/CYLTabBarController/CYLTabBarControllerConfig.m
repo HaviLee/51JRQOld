@@ -52,17 +52,15 @@
     UIViewController *jobNavigationController = [[CYNavigationViewController alloc]
                                                   initWithRootViewController:jobShowController];
     WMPageController *pageController = [self pageControllerStyleFlood];
-    MIScene *companyScene = [MIScene sceneWithView:@"CompanyshowView" controller:@"CompanyshowViewController" store:@"CompanyshowStore"];
-    UIViewController *companyViewController = [[MIMediator sharedMediator] viewControllerWithScene:companyScene context:nil];
     UIViewController *companyNavigationController = [[CYNavigationViewController alloc]
                                                   initWithRootViewController:pageController];
 
-    MIScene *conselorScene = [MIScene sceneWithView:@"ConselorshowView" controller:@"ConselorshowViewController" store:@"ConselorshowStore"];
+    MIScene *conselorScene = [MIScene sceneWithView:@"MessageshowView" controller:@"MessageshowViewController" store:@"MessageshowStore"];
     UIViewController *conselorViewController = [[MIMediator sharedMediator] viewControllerWithScene:conselorScene context:nil];
     UIViewController *conselorNavigationController = [[CYNavigationViewController alloc]
                                                      initWithRootViewController:conselorViewController];
 
-    MIScene *messageScene = [MIScene sceneWithView:@"MessageshowView" controller:@"MessageshowViewController" store:@"MessageshowStore"];
+    MIScene *messageScene = [MIScene sceneWithView:@"MineshowView" controller:@"MineshowViewController" store:@"MineshowStore"];
     UIViewController *messageViewController = [[MIMediator sharedMediator] viewControllerWithScene:messageScene context:nil];
     UIViewController *messageNavigationController = [[CYNavigationViewController alloc]
                                                      initWithRootViewController:messageViewController];
@@ -79,10 +77,6 @@
 
 - (WMPageController *)pageControllerStyleFlood {
 
-    MIScene *companyScene = [MIScene sceneWithView:@"CompanyshowView" controller:@"CompanyshowViewController" store:@"CompanyshowStore"];
-    UIViewController *companyViewController = [[MIMediator sharedMediator] viewControllerWithScene:companyScene context:nil];
-    MIScene *conselorScene = [MIScene sceneWithView:@"ConselorshowView" controller:@"ConselorshowViewController" store:@"ConselorshowStore"];
-    UIViewController *conselorViewController = [[MIMediator sharedMediator] viewControllerWithScene:conselorScene context:nil];
     NSArray *viewControllers = @[@"Company",@"Conselor"];
     NSArray *titles = @[@"企业职位", @"猎头职位"];
 
@@ -105,19 +99,19 @@
 
 - (NSArray *)tabBarItemsAttributesForController {
     NSDictionary *firstTabBarItemsAttributes = @{
-                                                 CYLTabBarItemTitle : @"主页",
+                                                 CYLTabBarItemTitle : @"首页",
                                                  CYLTabBarItemImage : @"home_normal",
                                                  CYLTabBarItemSelectedImage : @"home_highlight",
                                                  };
     NSDictionary *secondTabBarItemsAttributes = @{
-                                                  CYLTabBarItemTitle : @"我的",
-                                                  CYLTabBarItemImage : @"account_normal",
-                                                  CYLTabBarItemSelectedImage : @"account_highlight",
+                                                  CYLTabBarItemTitle : @"职位",
+                                                  CYLTabBarItemImage : @"job_normal",
+                                                  CYLTabBarItemSelectedImage : @"job_highlight",
                                                   };
     NSDictionary *thirdTabBarItemsAttributes = @{
-                                                  CYLTabBarItemTitle : @"我的",
-                                                  CYLTabBarItemImage : @"account_normal",
-                                                  CYLTabBarItemSelectedImage : @"account_highlight",
+                                                  CYLTabBarItemTitle : @"消息",
+                                                  CYLTabBarItemImage : @"message_normal",
+                                                  CYLTabBarItemSelectedImage : @"message_highlight",
                                                   };
     NSDictionary *fourthTabBarItemsAttributes = @{
                                                   CYLTabBarItemTitle : @"我的",

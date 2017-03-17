@@ -23,8 +23,9 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         _titleLabel = [[UILabel alloc]init];
-        _titleLabel.font = [UIFont systemFontOfSize:12];
+        _titleLabel.font = k24NormalWordFont;;
         _titleLabel.text = @"资讯";
+        _titleLabel.textColor = kFocusTextColor;
         _moreButton = [UIButton buttonWithType:UIButtonTypeCustom];
         [_moreButton setImage:[UIImage imageNamed:@"cell_arrow_down"] forState:UIControlStateNormal];
         [self.contentView sd_addSubviews:@[_titleLabel,_moreButton]];

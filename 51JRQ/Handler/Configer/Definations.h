@@ -57,17 +57,23 @@
 #endif
 
 //cell 颜色效果
-#define kRealSize(size)          (size/1.5)
+#define kRealSize(size)          (size/2)
 #define kNaviBarBackColor        [UIColor colorWithRed:0.984 green:0.431 blue:0.020 alpha:1.00]
 #define kTabbarBackColor         [UIColor colorWithRed:0.239 green:0.204 blue:0.216 alpha:1.00]
-#define kHomeOrderBarColor       [UIColor colorWithRed:0.945 green:0.784 blue:0.478 alpha:1.00]
+#define kFocusTextColor          [UIColor colorWithRed:0.984 green:0.431 blue:0.020 alpha:1.00]
+#define kPayTextColor            [UIColor colorWithRed:0.239 green:0.204 blue:0.216 alpha:1.00]
+#define kBarTintColor            [UIColor whiteColor]
+
+
+
 #define kCarOrderBarColor        [UIColor colorWithRed:0.475 green:0.659 blue:0.565 alpha:1.00]
-#define kFocusTextColor          [UIColor colorWithRed:0.890 green:0.502 blue:0.400 alpha:1.00]
-#define kBarLightTextColor       [UIColor colorWithRed:0.957 green:0.906 blue:0.729 alpha:1.00]
+
 #define kSepetorColor            [UIColor colorWithRed:0.953 green:0.953 blue:0.953 alpha:1.00]
 
-#define kTextNormalWordFont [UIFont systemFontOfSize:17]
-#define kTextTitleWordFont [UIFont systemFontOfSize:17]
+#define k30NormalWordFont [UIFont systemFontOfSize:15]
+#define k24NormalWordFont [UIFont systemFontOfSize:12]
+#define k30WeightWordFont [UIFont systemFontOfSize:15 weight:3]
+#define k24WeightWordFont [UIFont systemFontOfSize:12 weight:3]
 
 #define kButtonViewWidth [UIScreen mainScreen].bounds.size.width - 40
 #define kScreen_Bounds [UIScreen mainScreen].bounds

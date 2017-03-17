@@ -10,4 +10,6 @@
 
 @interface NewsTableViewCell : UITableViewCell
 
+- (void)setCellData:(NSDictionary *)cellData;
+
 @end

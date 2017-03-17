@@ -33,6 +33,7 @@
 
             // Enter the refresh status immediately
         [self.homeTableview.mj_header beginRefreshing];
+
     }
     return self;
 }
@@ -59,21 +60,16 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    if (section == 0) {
-        return 3;
-    }else if (section == 1){
-        return 3;
-    }
-    return 5;
+    return [[self.pipeline.data objectAtIndex:section] count]+1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (indexPath.section == 0) {
         if (indexPath.row == 0) {
-            TitleTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"titleCell"];
+            TitleTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([TitleTableViewCell class])];
             if (!cell) {
-                cell = [[TitleTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"titleCell"];
+                cell = [[TitleTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:NSStringFromClass([TitleTableViewCell class])];
             }
             cell.titleString = @"资讯";
             cell.selectionStyle = UITableViewCellSelectionStyleNone;
@@ -86,10 +82,12 @@
             return cell;
 
         }else{
-            NewsTableViewCell *newsCell = [tableView dequeueReusableCellWithIdentifier:@"newsCell"];
+            NewsTableViewCell *newsCell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([NewsTableViewCell class])];
             if (!newsCell) {
-                newsCell = [[NewsTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"newCell"];
+                newsCell = [[NewsTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:NSStringFromClass([NewsTableViewCell class])];
             }
+            NSDictionary *dic = [[self.pipeline.data objectAtIndex:indexPath.section] objectAtIndex:indexPath.row-1];
+            [newsCell setCellData:dic];
             newsCell.selectionStyle = UITableViewCellSelectionStyleNone;
             if ([newsCell respondsToSelector:@selector(setSeparatorInset:)]) {
                 [newsCell setSeparatorInset:UIEdgeInsetsZero];
@@ -103,9 +101,9 @@
 
     }else if (indexPath.section == 1){
         if (indexPath.row == 0) {
-            TitleTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"titleCell"];
+            TitleTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([TitleTableViewCell class])];
             if (!cell) {
-                cell = [[TitleTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"titleCell"];
+                cell = [[TitleTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:NSStringFromClass([TitleTableViewCell class])];
             }
             cell.selectionStyle = UITableViewCellSelectionStyleNone;
             cell.titleString = @"活动";
@@ -118,10 +116,13 @@
             return cell;
 
         }else if(indexPath.row == 1){
-            NewsTableViewCell *newsCell = [tableView dequeueReusableCellWithIdentifier:@"newsCell"];
+            NewsTableViewCell *newsCell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([NewsTableViewCell class])];
             if (!newsCell) {
-                newsCell = [[NewsTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"newCell"];
+                newsCell = [[NewsTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:NSStringFromClass([NewsTableViewCell class])];
             }
+            NSDictionary *dic = [[self.pipeline.data objectAtIndex:indexPath.section] objectAtIndex:indexPath.row-1];
+            [newsCell setCellData:dic];
+
             newsCell.selectionStyle = UITableViewCellSelectionStyleNone;
             if ([newsCell respondsToSelector:@selector(setSeparatorInset:)]) {
                 [newsCell setSeparatorInset:UIEdgeInsetsZero];
@@ -131,11 +132,14 @@
             }
             return newsCell;
             
-        }else if(indexPath.row == 2){
-            ActivityTableViewCell *newsCell = [tableView dequeueReusableCellWithIdentifier:@"activityCell"];
+        }else{
+            ActivityTableViewCell *newsCell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([ActivityTableViewCell class])];
             if (!newsCell) {
-                newsCell = [[ActivityTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"activityCell"];
+                newsCell = [[ActivityTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:NSStringFromClass([ActivityTableViewCell class])];
             }
+            NSDictionary *dic = [[self.pipeline.data objectAtIndex:indexPath.section] objectAtIndex:indexPath.row-1];
+            [newsCell setCellData:dic];
+
             newsCell.selectionStyle = UITableViewCellSelectionStyleNone;
             if ([newsCell respondsToSelector:@selector(setSeparatorInset:)]) {
                 [newsCell setSeparatorInset:UIEdgeInsetsZero];
@@ -148,9 +152,9 @@
         }
     }else{
         if (indexPath.row == 0) {
-            PositionTitleTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"positionCell"];
+            PositionTitleTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([PositionTitleTableViewCell class])];
             if (!cell) {
-                cell = [[PositionTitleTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"titleCell"];
+                cell = [[PositionTitleTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:NSStringFromClass([PositionTitleTableViewCell class])];
             }
             cell.titleString = @"推荐职位";
             cell.selectionStyle = UITableViewCellSelectionStyleNone;
@@ -163,9 +167,9 @@
             return cell;
 
         }else {
-            PostionTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"posiCell"];
+            PostionTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([PostionTableViewCell class])];
             if (!cell) {
-                cell = [[PostionTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"posiCell"];
+                cell = [[PostionTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:NSStringFromClass([PostionTableViewCell class])];
             }
             cell.selectionStyle = UITableViewCellSelectionStyleNone;
             return cell;
@@ -205,7 +209,7 @@
             return 35;
         }else if(indexPath.row == 1){
             return 150;
-        }else if(indexPath.row == 2){
+        }else{
             return 90;
         }
     }else if(indexPath.section == 2){
@@ -221,6 +225,10 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    if (indexPath.section != 2 && indexPath.row != 0) {
+        NSString *url = [[[self.pipeline.data objectAtIndex:indexPath.section] objectAtIndex:indexPath.row-1] objectForKey:@"urlLink"];
+        self.pipeline.linkUrl = url;
+    }
 }
 
 - (void)loadNewData
@@ -236,6 +244,12 @@
 
 - (void)setupPipeline:(__kindof MIPipeline *)pipeline {
     self.pipeline = pipeline;
+    @weakify(self)
+    [MIObserve(self.pipeline, data) changed:^(id  _Nonnull newValue) {
+        @strongify(self)
+        [self.homeTableview reloadData];
+    }];
+
 }
 
 @end

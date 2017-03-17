@@ -26,8 +26,8 @@
         _activityImageView = [[UIImageView alloc]init];
         _activityTitleLabel = [[UILabel alloc]init];
         _activitySubTitleLabel = [[UILabel alloc]init];
-        _activityTitleLabel.font = [UIFont systemFontOfSize:15];
-        _activitySubTitleLabel.font = [UIFont systemFontOfSize:12];
+        _activityTitleLabel.font = k30NormalWordFont;
+        _activitySubTitleLabel.font = k24NormalWordFont;
         [_activityImageView setImageWithURL:[NSURL URLWithString:@"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1489577406998&di=3765268103ba5e3f36bc3570cd4e8ac2&imgtype=0&src=http%3A%2F%2Fs3.sinaimg.cn%2Fmw690%2F0062AT0Egy6YH5BSjJw12"]];
         _activityTitleLabel.text = @"张晓彤开讲了";
         _activitySubTitleLabel.text = @"3.25日HR大放招，快来呦~";
@@ -56,8 +56,8 @@
         _collectButton.image = [UIImage imageNamed:@"collect_image"];
         _collectButton.duration = 1;
         _collectButton.defaultColor = [UIColor lightGrayColor];
-        _collectButton.lineColor = [UIColor purpleColor];
-        _collectButton.favoredColor = [UIColor redColor];
+        _collectButton.lineColor = kFocusTextColor;
+        _collectButton.favoredColor = kFocusTextColor;
         _collectButton.circleColor = [UIColor clearColor];
         _collectButton.userInteractionEnabled = YES;
         [_collectButton addTarget:self action:@selector(buttonAction:) forControlEvents:UIControlEventTouchUpInside];
@@ -85,6 +85,13 @@
 - (void)shareTap
 {
     DeBugLog(@"shared");
+}
+
+- (void)setCellData:(NSDictionary *)cellData
+{
+    _activityTitleLabel.text = [cellData objectForKey:@"title"];
+    _activitySubTitleLabel.text = [cellData objectForKey:@"subTitle"];
+    [_activityImageView setImageWithURL:[NSURL URLWithString:[cellData objectForKey:@"imageUrl"]]];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

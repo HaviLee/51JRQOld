@@ -24,10 +24,11 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         _titleLabel = [[UILabel alloc]init];
-        _titleLabel.font = [UIFont systemFontOfSize:12];
+        _titleLabel.font = k24NormalWordFont;
         _titleLabel.text = @"资讯";
+        _titleLabel.textColor = kFocusTextColor;
         _moreButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        [_moreButton setImage:[UIImage imageNamed:@"cell_arrow_down"] forState:UIControlStateNormal];
+        [_moreButton setImage:[[UIImage imageNamed:@"cell_arrow_down"] imageByTintColor:kFocusTextColor] forState:UIControlStateNormal];
         _moreButton.transform=CGAffineTransformMakeRotation(-M_PI/2);
 
         [self.contentView sd_addSubviews:@[_titleLabel,_moreButton]];
@@ -45,9 +46,10 @@
         .widthIs(40);
 
         _moreLabel = [[UILabel alloc]init];
-        _moreLabel.font = [UIFont systemFontOfSize:12];
+        _moreLabel.font = k24NormalWordFont;
         _moreLabel.textAlignment = NSTextAlignmentRight;
         _moreLabel.text = @"更多";
+        _moreLabel.textColor = kFocusTextColor;
         [self.contentView addSubview:_moreLabel];
 
         _moreLabel.sd_layout

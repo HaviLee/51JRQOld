@@ -18,6 +18,7 @@
 #import "LBXAlertAction.h"
 #import "LBXScanViewStyle.h"
 #import "SubLBXScanViewController.h"
+#import "RxWebViewController.h"
 
 @interface JobshowViewController ()<UISearchBarDelegate,PYSearchViewControllerDelegate>
 
@@ -31,6 +32,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self.store fetchData];
     UIView *titleView = [[UIView alloc] init];
     titleView.py_x = 10 * 0.5;
     titleView.py_y = 7;
@@ -54,7 +56,6 @@
     searchBar.placeholder = @"搜索";
     searchBar.backgroundImage = [NSBundle py_imageNamed:@"clearImage"];
     searchBar.delegate = self;
-//    [self.navigationController.navigationBar addSubview:self.searchBar];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"navi_scan_button"] style:UIBarButtonItemStylePlain target:self action:@selector(scanButtonTap)];
     // Add you own code
 //    [[BaseNetworking sharedAPIManager] queryKeyWith:nil success:^(id response) {
@@ -210,11 +211,24 @@
     SubLBXScanViewController *vc = [SubLBXScanViewController new];
     vc.style = style;
         //vc.isOpenInterestRect = YES;
+    UIBarButtonItem *backItem = [[UIBarButtonItem alloc] init];
+    backItem.title = @"返回";
+    self.navigationItem.backBarButtonItem = backItem;
     [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)setupPipeline:(__kindof MIPipeline *)pipeline {
     self.pipeline = pipeline;
+    @weakify(self)
+    [MIObserve(self.pipeline,linkUrl) changed:^(id  _Nonnull newValue) {
+        @strongify(self)
+        RxWebViewController* webViewController = [[RxWebViewController alloc] initWithUrl:[NSURL URLWithString:self.pipeline.linkUrl]];
+        UIBarButtonItem *back = [[UIBarButtonItem alloc]init];
+        back.title = @"返回";
+        self.navigationItem.backBarButtonItem = back;
+        self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+        [self.navigationController pushViewController:webViewController animated:YES];
+    }];
 }
 
 #pragma mark - PYSearchViewControllerDelegate

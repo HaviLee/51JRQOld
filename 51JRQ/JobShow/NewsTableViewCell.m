@@ -27,7 +27,7 @@
         _newsImageView = [[UIImageView alloc]init];
         [_newsImageView setImageWithURL:[NSURL URLWithString:@"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1489565900671&di=999ad1c35a148f89bc650ad8f61862d7&imgtype=0&src=http%3A%2F%2Fimages.diandianzu.com%2FUploads%2FPhoto%2Fw_5608dc7810e85.jpg"]];
         _newsTitleLabel = [[UILabel alloc]init];
-        _newsTitleLabel.font = [UIFont systemFontOfSize:15];
+        _newsTitleLabel.font = k30NormalWordFont;
         _newsTitleLabel.text = @"金茂大厦招聘活动";
         [self.contentView sd_addSubviews:@[_newsImageView,_newsTitleLabel]];
 
@@ -46,8 +46,8 @@
         _collectButton.image = [UIImage imageNamed:@"collect_image"];
         _collectButton.duration = 1;
         _collectButton.defaultColor = [UIColor lightGrayColor];
-        _collectButton.lineColor = [UIColor purpleColor];
-        _collectButton.favoredColor = [UIColor redColor];
+        _collectButton.lineColor = kFocusTextColor;
+        _collectButton.favoredColor = kFocusTextColor;
         _collectButton.circleColor = [UIColor clearColor];
         _collectButton.userInteractionEnabled = YES;
         [_collectButton addTarget:self action:@selector(buttonAction:) forControlEvents:UIControlEventTouchUpInside];
@@ -69,6 +69,12 @@
 - (void)buttonAction:(SYFavoriteButton *)sender {
     sender.selected = !sender.selected;
     DeBugLog(@"like");
+}
+
+- (void)setCellData:(NSDictionary *)cellData
+{
+    _newsTitleLabel.text = [cellData objectForKey:@"title"];
+    [_newsImageView setImageWithURL:[NSURL URLWithString:[cellData objectForKey:@"imageUrl"]]];
 }
 
 - (void)shareTap

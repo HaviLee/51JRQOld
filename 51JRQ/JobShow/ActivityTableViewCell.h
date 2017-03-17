@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface ActivityTableViewCell : UITableViewCell
-
+- (void)setCellData:(NSDictionary *)cellData;
 @end

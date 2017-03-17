@@ -19,11 +19,11 @@
                 <rect key="frame" x="0.0" y="0.0" width="408" height="131.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xU9-cS-7UQ" customClass="TTGTextTagCollectionView">
+                    <view contentMode="scaleToFill" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="xU9-cS-7UQ" customClass="TTGTextTagCollectionView">
                         <rect key="frame" x="24" y="53" width="359" height="71"/>
                     </view>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Cell" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mM3-aC-pmV" userLabel="label">
-                        <rect key="frame" x="24" y="8" width="106" height="24"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cell" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mM3-aC-pmV" userLabel="label">
+                        <rect key="frame" x="24" y="8" width="31" height="24"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="24" id="oHw-NY-pxV"/>
                         </constraints>
@@ -31,8 +31,8 @@
                         <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Cell" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0bh-CG-UFb" userLabel="select">
-                        <rect key="frame" x="125" y="8" width="106" height="24"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cell" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0bh-CG-UFb" userLabel="select">
+                        <rect key="frame" x="65" y="8" width="31" height="24"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="24" id="5F3-LP-wan"/>
                         </constraints>
@@ -42,14 +42,14 @@
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="xU9-cS-7UQ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="5" id="AbK-rD-BcM"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="xU9-cS-7UQ" secondAttribute="bottom" constant="5" id="TUO-H4-nuR"/>
-                    <constraint firstItem="xU9-cS-7UQ" firstAttribute="top" secondItem="mM3-aC-pmV" secondAttribute="bottom" constant="5" id="VYy-fi-aLL"/>
-                    <constraint firstAttribute="topMargin" secondItem="mM3-aC-pmV" secondAttribute="top" constant="5" id="eFE-4d-rZm"/>
-                    <constraint firstItem="0bh-CG-UFb" firstAttribute="leading" secondItem="mM3-aC-pmV" secondAttribute="trailing" constant="5" id="fug-Pb-gRt"/>
-                    <constraint firstAttribute="topMargin" secondItem="0bh-CG-UFb" secondAttribute="top" constant="5" id="gAE-Kc-BWZ"/>
-                    <constraint firstItem="mM3-aC-pmV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="5" id="gEL-nJ-ibC"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="xU9-cS-7UQ" secondAttribute="trailing" constant="5" id="mLh-hu-GUN"/>
+                    <constraint firstItem="xU9-cS-7UQ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="16" id="AbK-rD-BcM"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="xU9-cS-7UQ" secondAttribute="bottom" constant="-0.5" id="TUO-H4-nuR"/>
+                    <constraint firstItem="xU9-cS-7UQ" firstAttribute="top" secondItem="mM3-aC-pmV" secondAttribute="bottom" constant="21" id="VYy-fi-aLL"/>
+                    <constraint firstAttribute="topMargin" secondItem="mM3-aC-pmV" secondAttribute="top" id="eFE-4d-rZm"/>
+                    <constraint firstItem="0bh-CG-UFb" firstAttribute="leading" secondItem="mM3-aC-pmV" secondAttribute="trailing" constant="10" id="fug-Pb-gRt"/>
+                    <constraint firstAttribute="topMargin" secondItem="0bh-CG-UFb" secondAttribute="top" id="gAE-Kc-BWZ"/>
+                    <constraint firstItem="mM3-aC-pmV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="16" id="gEL-nJ-ibC"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="xU9-cS-7UQ" secondAttribute="trailing" constant="17" id="mLh-hu-GUN"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>

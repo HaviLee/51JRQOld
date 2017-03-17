@@ -71,6 +71,12 @@
 		5735F4561E7AD03100504325 /* CompanyJobTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5735F4551E7AD03100504325 /* CompanyJobTableViewCell.m */; };
 		5735F4591E7AD30E00504325 /* CompanyHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5735F4581E7AD30E00504325 /* CompanyHeaderView.m */; };
 		5735F45C1E7AE01A00504325 /* CompanySubHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5735F45B1E7AE01A00504325 /* CompanySubHeaderView.m */; };
+		5735F47A1E7BB50000504325 /* backItemImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5735F46F1E7BB50000504325 /* backItemImage@2x.png */; };
+		5735F47B1E7BB50000504325 /* backItemImage_hl@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5735F4701E7BB50000504325 /* backItemImage_hl@2x.png */; };
+		5735F47C1E7BB50000504325 /* NJKWebViewProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = 5735F4731E7BB50000504325 /* NJKWebViewProgress.m */; };
+		5735F47D1E7BB50000504325 /* NJKWebViewProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5735F4751E7BB50000504325 /* NJKWebViewProgressView.m */; };
+		5735F47E1E7BB50000504325 /* RxWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5735F4771E7BB50000504325 /* RxWebViewController.m */; };
+		5735F47F1E7BB50000504325 /* RxWebViewNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5735F4791E7BB50000504325 /* RxWebViewNavigationViewController.m */; };
 		577A84CC1E5E8ED800834E61 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 577A84CB1E5E8ED800834E61 /* main.m */; };
 		577A84CF1E5E8ED800834E61 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 577A84CE1E5E8ED800834E61 /* AppDelegate.m */; };
 		577A84D81E5E8ED800834E61 /* _1JRQ.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 577A84D61E5E8ED800834E61 /* _1JRQ.xcdatamodeld */; };
@@ -307,6 +313,16 @@
 		5735F4581E7AD30E00504325 /* CompanyHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompanyHeaderView.m; sourceTree = "<group>"; };
 		5735F45A1E7AE01A00504325 /* CompanySubHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompanySubHeaderView.h; sourceTree = "<group>"; };
 		5735F45B1E7AE01A00504325 /* CompanySubHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompanySubHeaderView.m; sourceTree = "<group>"; };
+		5735F46F1E7BB50000504325 /* backItemImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "backItemImage@2x.png"; sourceTree = "<group>"; };
+		5735F4701E7BB50000504325 /* backItemImage_hl@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "backItemImage_hl@2x.png"; sourceTree = "<group>"; };
+		5735F4721E7BB50000504325 /* NJKWebViewProgress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NJKWebViewProgress.h; sourceTree = "<group>"; };
+		5735F4731E7BB50000504325 /* NJKWebViewProgress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NJKWebViewProgress.m; sourceTree = "<group>"; };
+		5735F4741E7BB50000504325 /* NJKWebViewProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NJKWebViewProgressView.h; sourceTree = "<group>"; };
+		5735F4751E7BB50000504325 /* NJKWebViewProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NJKWebViewProgressView.m; sourceTree = "<group>"; };
+		5735F4761E7BB50000504325 /* RxWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RxWebViewController.h; sourceTree = "<group>"; };
+		5735F4771E7BB50000504325 /* RxWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RxWebViewController.m; sourceTree = "<group>"; };
+		5735F4781E7BB50000504325 /* RxWebViewNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RxWebViewNavigationViewController.h; sourceTree = "<group>"; };
+		5735F4791E7BB50000504325 /* RxWebViewNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RxWebViewNavigationViewController.m; sourceTree = "<group>"; };
 		577A84C71E5E8ED800834E61 /* 51JRQ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 51JRQ.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		577A84CB1E5E8ED800834E61 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		577A84CD1E5E8ED800834E61 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -753,6 +769,31 @@
 			path = WMMenuView;
 			sourceTree = "<group>";
 		};
+		5735F46E1E7BB50000504325 /* RxWebViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5735F46F1E7BB50000504325 /* backItemImage@2x.png */,
+				5735F4701E7BB50000504325 /* backItemImage_hl@2x.png */,
+				5735F4711E7BB50000504325 /* NJKWebViewProgress */,
+				5735F4761E7BB50000504325 /* RxWebViewController.h */,
+				5735F4771E7BB50000504325 /* RxWebViewController.m */,
+				5735F4781E7BB50000504325 /* RxWebViewNavigationViewController.h */,
+				5735F4791E7BB50000504325 /* RxWebViewNavigationViewController.m */,
+			);
+			path = RxWebViewController;
+			sourceTree = "<group>";
+		};
+		5735F4711E7BB50000504325 /* NJKWebViewProgress */ = {
+			isa = PBXGroup;
+			children = (
+				5735F4721E7BB50000504325 /* NJKWebViewProgress.h */,
+				5735F4731E7BB50000504325 /* NJKWebViewProgress.m */,
+				5735F4741E7BB50000504325 /* NJKWebViewProgressView.h */,
+				5735F4751E7BB50000504325 /* NJKWebViewProgressView.m */,
+			);
+			path = NJKWebViewProgress;
+			sourceTree = "<group>";
+		};
 		577A84BE1E5E8ED800834E61 = {
 			isa = PBXGroup;
 			children = (
@@ -907,6 +948,7 @@
 		577A85241E5E96EC00834E61 /* Vender */ = {
 			isa = PBXGroup;
 			children = (
+				5735F46E1E7BB50000504325 /* RxWebViewController */,
 				5735F4401E7AC18A00504325 /* WMPageController */,
 				5735F4391E7A8B3200504325 /* SegmentCtrol */,
 				5735F4071E7A80C700504325 /* SDWebImage */,
@@ -1555,10 +1597,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5735F47B1E7BB50000504325 /* backItemImage_hl@2x.png in Resources */,
 				5701A7F81E5FDE6200C6CE57 /* com_51jrq.cer in Resources */,
 				5701A7FA1E60036400C6CE57 /* ReturnCode.plist in Resources */,
 				577A84DD1E5E8ED800834E61 /* LaunchScreen.storyboard in Resources */,
 				57ACB2F11E6E87E800D04A4D /* MJRefresh.bundle in Resources */,
+				5735F47A1E7BB50000504325 /* backItemImage@2x.png in Resources */,
 				5735F3A31E77E32D00504325 /* PYSearch.bundle in Resources */,
 				5735F3AA1E781E9000504325 /* homeData.plist in Resources */,
 				577A84DA1E5E8ED800834E61 /* Assets.xcassets in Resources */,
@@ -1750,6 +1794,7 @@
 				5735F4561E7AD03100504325 /* CompanyJobTableViewCell.m in Sources */,
 				57ACB2F41E6E87E800D04A4D /* UIScrollView+MJExtension.m in Sources */,
 				57ACB2F31E6E87E800D04A4D /* NSBundle+MJRefresh.m in Sources */,
+				5735F47E1E7BB50000504325 /* RxWebViewController.m in Sources */,
 				57ACB2EE1E6E87E800D04A4D /* MJRefreshGifHeader.m in Sources */,
 				577A85DB1E5EAA3300834E61 /* EXTSelectorChecking.m in Sources */,
 				5735F42F1E7A80C700504325 /* SDWebImageDownloaderOperation.m in Sources */,
@@ -1801,10 +1846,12 @@
 				5735F45C1E7AE01A00504325 /* CompanySubHeaderView.m in Sources */,
 				577A86081E5FCF1B00834E61 /* BaseNetworking.m in Sources */,
 				577A85E61E5EAA3400834E61 /* MIStore.m in Sources */,
+				5735F47F1E7BB50000504325 /* RxWebViewNavigationViewController.m in Sources */,
 				5735F43E1E7A8B3200504325 /* YUMixtureView.m in Sources */,
 				577A85E81E5EAA3400834E61 /* UIView+MIPipeline.m in Sources */,
 				577A85741E5EA86C00834E61 /* JobshowView.m in Sources */,
 				57ACB2F81E6E87E800D04A4D /* UIView+SDAutoLayout.m in Sources */,
+				5735F47D1E7BB50000504325 /* NJKWebViewProgressView.m in Sources */,
 				5735F4291E7A80C700504325 /* MKAnnotationView+WebCache.m in Sources */,
 				577A85511E5EA84D00834E61 /* MessageshowViewController.m in Sources */,
 				5735F3AD1E7839B500504325 /* NewsTableViewCell.m in Sources */,
@@ -1840,6 +1887,7 @@
 				5735F3B31E783B5200504325 /* TitleTableViewCell.m in Sources */,
 				577A86041E5FCBEA00834E61 /* HiInitData.m in Sources */,
 				577A85E71E5EAA3400834E61 /* MIViewController.m in Sources */,
+				5735F47C1E7BB50000504325 /* NJKWebViewProgress.m in Sources */,
 				5735F4591E7AD30E00504325 /* CompanyHeaderView.m in Sources */,
 				577A85901E5EA96000834E61 /* MineshowStore.m in Sources */,
 				5735F3CE1E79797200504325 /* UIActionSheet+LBXAlertAction.m in Sources */,

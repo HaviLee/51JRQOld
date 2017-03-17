@@ -23,14 +23,14 @@
     self = [super initWithContext:context];
     
     if (self) {
-        
     }
     
     return self;
 }
 
 - (void)fetchData {
-    
+    NSString *path = [[NSBundle mainBundle]pathForResource:@"homeData" ofType:@"plist"];
+    self.jobshowPipeline.data = [NSArray arrayWithContentsOfFile:path];
 }
 
 - (__kindof MIPipeline *)pipeline {

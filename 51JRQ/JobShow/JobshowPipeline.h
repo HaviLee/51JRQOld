@@ -10,4 +10,7 @@
 
 @interface JobshowPipeline : MIPipeline
 
+@property (nonatomic, strong) NSArray *data;
+@property (nonatomic, strong) NSString *linkUrl;
+
 @end
